@@ -21,13 +21,13 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/icon/s.png",
+              "src/assets","src/images"
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/app/menu.js"]
           },
           "configurations": {
             "production": {
@@ -39,8 +39,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5kb",
+                  "maximumError": "5kb"
                 }
               ],
               "outputHashing": "all"

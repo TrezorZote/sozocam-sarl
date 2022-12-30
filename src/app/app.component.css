@@ -1,0 +1,395 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Comforter+Brush&family=Monoton&family=Road+Rage&family=Style+Script&family=Vesper+Libre&display=swap');
+section.marketing {
+  background: white;
+  margin: -.25em .5em .5em .5em;
+  box-shadow: 0 0 1rem 0 black;
+  border-radius: 8px;
+}
+
+section.marketing p  {
+  text-align: center;
+  margin: 1em .9em 2em .2em;
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-size: 1.05em;
+  color: black;
+}
+
+section.marketing span  {
+   
+    color: orangered;
+  }
+  
+
+section.contact-right h3 {
+  margin-top: -.5em;
+  margin-left: 2em;
+  font-family: 'Trebuchet MS';
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+section.contact-right h3 span {
+  color: red;
+}
+
+section.contact-right iframe {
+    width: 95%;
+    height: 18em;
+    margin-left: .25em;
+}
+.locationLogo{
+  width: 1.6em;
+  height: 1.6em;
+  margin-top: -4.5em;
+  margin-left: .5em;
+}
+.location{
+    width: 1.45em;
+    height: 1.45em;
+  
+  }
+  
+
+.logoss{
+
+  align-self: center;
+display: grid;
+grid-template-columns: 24% 20% 20% 20% 20% ;
+
+}
+.clothLogo{
+  width: 1.9em;
+  height: 1.9em;
+  margin-left: 1em;
+ margin-top: 1.3em;
+ background-color: orangered;
+ border-radius: 100%;
+}
+
+.laptopSell{
+  width: 1.9em;
+  height: 1.9em;
+  margin-top: 1.4em;
+ 
+  background-color: orangered;
+  border-radius: 100%;
+}
+
+.phoneSell{
+  width: 2em;
+  height: 2em;
+  margin-top: 1.35em;
+  background-color: orangered;
+  border-radius: 100%;
+}
+
+.carLogo{
+  width: 2em;
+  height: 2em;
+  margin-top: 1.3em;
+  background-color: orangered;
+  border-radius: 100%;
+}
+
+.houseLogo{
+  width: 1.9em;
+  height: 1.9em;
+  margin-top: 1.4em;
+  background-color: orangered;
+  border-radius: 100%;
+}
+
+
+
+
+.item-rounded-image{
+  object-fit: contain;
+  width: 100%;
+   height: 16.5em;
+   margin: .25em .25em .5em 0;
+   
+}
+
+
+.spa{
+  font-family: 'comfortaa';
+    color:peachpuff;
+  font-size: 1.05em;
+  font-weight: bolder;
+}
+
+.findTag{
+    color: orangered;
+}
+.findTag:hover{
+  color:black ;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.closeDelete{
+ float: right;
+font-size: 1.6em;
+ border: none;
+ background-color: black;
+ margin: 0 .5em .5em auto;
+ cursor: pointer;
+ }
+
+
+
+body {
+  background-color: white;
+  font-family: 'Trebuchet MS';
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: rgb(190, 51, 0);
+    box-shadow: 0 .2em .5em 0 black;
+    width: 100%;
+    height:3.8em;
+    margin-left: 0;
+    z-index: 998;
+  }
+  
+  .navbar .navbar-logo {
+    margin-left: -.5em;
+    color:rgb(255, 187, 61);
+    font-weight: 200;
+    text-decoration: none;
+    font-family: 'Strait', sans-serif;
+    font-size: 22px;
+    margin-top: .2em;
+  }
+  
+  .navbar .navbar-logo span {
+    color:rgb(252, 227, 180);
+  font-weight: 200;
+  }
+  
+  
+
+ .menu-btn {
+  width: 2.5em;
+  float: right;
+  margin-right: -.3em;
+  margin-top: -0.10em;
+  cursor: pointer;
+}
+
+
+nav {
+  position: fixed;
+  z-index: 989;
+  width: 100%;
+  right: 0;
+  top:0;
+  background-color: rgba(255, 255, 255, 0.972);
+  height: 13em;
+  padding: 1em;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+nav .exit-btn {
+  margin-top: .25em;
+  width: 1.15em;
+  height: 1.2em;
+  cursor: pointer;
+  float: right;
+  margin-right:-.2em;
+  margin-bottom: .5em;
+}
+
+nav .navbar-menu {
+  margin-top: 2.9em;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+nav .navbar-menu li {
+  color: #361500;
+  list-style-type: none;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  font-family: 'Comfortaa';
+  text-align: left;
+  margin-left: -1.75em;
+  font-weight: bold;
+  margin-top: 1.3em;
+  font-size: 1.25em;
+  border-bottom: 2px solid #361500;
+}
+nav .navbar-menu li:hover {
+  border-bottom: 2px solid chocolate;
+}
+
+nav .navbar-menu a {
+  color: black;
+  text-decoration: none;
+  margin-left: .7em;
+}
+
+
+ nav.open-nav{
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+          -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition: -webkit-transform .5s ease-in-out;
+          transition: transform .5s ease-in-out;
+          transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+
+@media only screen and (min-width: 640px) {
+  .menu-btn, .exit-btn {
+    display: none;
+  }
+  .navbar {
+    position:-webkit-sticky;
+    
+    background-color:black;
+    box-shadow: 0 0 .5rem 0 #361500;
+  }
+  .navbar .navbar-logo span {
+    color: chocolate; 
+  }
+  .navbar .navbar-logo  {
+    color:peachpuff;
+    margin-top: .2em;
+    font-size: 22px;
+  }
+  .navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: unset;
+  }
+  nav {
+    background: none;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 430px auto;
+        grid-template-columns: 400px auto;
+    position: unset;
+    height: auto;
+    width: 70%;
+    padding: .5em;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  nav ul.navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    margin-top: -1.3em;
+    position: absolute;
+    right: -5.5em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav ul.navbar-menu li {
+   color: white;
+    font-weight: 300;
+    font-size: 1.1em;
+    float: right;
+    font-family:'Trebuchet MS';
+    margin-right: 4em;
+    margin-top: .8em;
+    border-bottom: none;
+  }
+  nav ul.navbar-menu li:hover {
+    border-bottom: none;
+  }
+  
+  nav ul.navbar-menu a {
+    text-decoration: none;
+    color: peachpuff;
+    text-decoration: 2px underline chocolate;
+  }
+  
+nav .navbar-menu a:hover {
+  color: chocolate;
+  text-decoration: 2px underline peachpuff;
+}
+  .locationLogo{
+   display: none;
+  }
+}
+
+              
+  @media only screen and (min-width: 630px) {
+                
+
+.locationLogo{
+  display: none;
+ 
+ }
+ 
+ .clothLogo{
+  display: none;
+ }
+ 
+ .laptopSell{
+  display: none;
+ }
+ 
+ .phoneSell{
+ display: none;
+ }
+ 
+ .dressLogo{
+  display: none;
+ }
+ .carLogo{
+  display: none;
+ }
+ .phoneLogo{
+  display: none;
+ }
+ .houseLogo{
+  display: none;
+ }
+ .laptopLogo{
+  display: none;
+ }
+     
+}
+
+.head{
+   text-align: center;
+    font-family:'Poppins';
+    background-color:rgb(190, 51, 0);
+}
+
+
+.footer-section{
+    background-color: #151414;
+    padding: 1em;
+}
+.footer-section span{
+   color: rgb(138, 138, 138);
+  
+}
+.copyright-text{
+   border-bottom: -2em;
+   color:rgb(100, 100, 100); 
+}
