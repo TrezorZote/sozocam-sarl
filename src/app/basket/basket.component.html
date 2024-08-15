@@ -1,0 +1,42 @@
+<div class="posts-section">
+    <h2>Selected events</h2>
+    <div *ngIf="authService.getCurrentUserCorb()[0]==null">
+     <p>No events selected</p>
+    </div>
+    <div *ngFor="let items of authService.getCurrentUserCorb()" class="post">
+      <h2> {{items.event.eventCategory}}</h2>
+      <p>{{items.event.eventDescription}}</p>
+      <p></p>
+    </div>
+    <p *ngIf="this.getSum()>0"><a class="pay" (click)="onOpenModal('payment')">continue to pay  </a>{{getSum()}}$<p>
+
+
+    <!--select payment method-->
+<div  class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="updateProduct" aria-hidden="true">
+    <div  class="modal-dialog" role="document" style="background-color: white; margin-top: 3em;margin-left: .5em; height: 11em;">
+      <div class="modal-content" >
+        <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="payment-container">
+            <h3>Select Payment Method</h3>
+            <div class="payment-methods">
+                <label>
+                   <img (click)="this.authService.addOrder(this.authService.basket[0])" src="https://cdn-icons-png.flaticon.com/128/179/179457.png" alt="">
+                </label>
+                <label>
+                    <img (click)="this.authService.addOrder(this.authService.basket[0])"  src="https://cdn-icons-png.flaticon.com/128/196/196566.png" alt="">
+                </label>
+                <label>
+                   <img (click)="this.authService.addOrder(this.authService.basket[0])"  src="https://cdn-icons-png.flaticon.com/128/38/38978.png" alt="">
+                </label>
+            </div>
+            <br>
+            <div class="basket-total">
+                Total <span id="totalAmount">{{this.getSum()}}$</span>
+            </div>
+        </div>        
+  </div>
+  </div>
+  </div>
+</div>

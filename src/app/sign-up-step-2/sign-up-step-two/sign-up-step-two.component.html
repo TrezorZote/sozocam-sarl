@@ -1,0 +1,26 @@
+<section class="container">
+    <h2>Sign Up Address</h2>
+    <br>
+    <form>
+      <div>
+        <label for="street">Street and House number</label>
+        <input type="text" #street="ngModel" ngModel name="street" placeholder="aayoo str 23... " maxlength="28" required>
+      </div>
+      <div>
+        <label for="postal">postal Code</label>
+        <input type="number" #postal="ngModel" ngModel name="postal" placeholder="postal code... " maxlength="28" required>
+      </div>
+      <br>
+      <br>
+      <div class="postBtn">
+        <button class="submit" type="submit" (click)="nextStep(street.value,postal.value)">next</button>
+        <button class="back" (click)="back()">back</button>
+      </div>
+    </form>
+    <br>
+    <br>
+</section>
+<br>
+<br>
+  
+ 

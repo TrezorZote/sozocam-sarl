@@ -1,0 +1,27 @@
+<section class="container">
+    <h2>Sign Up Password</h2>
+    <br>
+    <form>
+      <div>
+        <label for="password">Password</label>
+        <input type="number" #password="ngModel" ngModel name="password" placeholder="enter password... " maxlength="28" required>
+      </div>
+      <div>
+        <label for="Repasswword">Repeat Password</label>
+        <input type="number" #repassword="ngModel" ngModel name="repassword" placeholder="repeat password... " maxlength="28" required>
+      </div>
+      <br>
+      <div class="term">
+        <div class="box"><input type="checkbox" checked></div> 
+        <label for="terms" class="lab">
+            I agree to the <a href="#" class="link">Terms of Service</a>.</label>
+      </div>
+      <br>
+      <div class="postBtn">
+        <button class="submit" type="submit" (click)="onSubmit(password.value,repassword.value)">submit</button>
+        <button class="back" (click)="back()">back</button>
+      </div>
+    </form>
+</section>
+<br>
+  

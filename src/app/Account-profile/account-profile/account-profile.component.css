@@ -1,0 +1,118 @@
+.container {
+    background: white;
+    margin: 3em auto 2.5em auto;
+    padding: 1em;
+    width: 100%;
+  }
+
+  .profile-page {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    margin-left: 20px;
+  }
+  
+  .profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .profile-info p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  
+  .posts-section {
+    margin-top: 20px;
+  }
+  
+  .posts-section h2 {
+    color: #4B5320;
+    margin-bottom: 20px;
+  }
+  
+  .post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .post p {
+    margin: 0;
+  }
+  .updateCheck {
+    font-weight: 600;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 .1rem .3rem 0 black ;
+  width: 4.7em;
+  margin:1.5em auto auto 2.5em ;
+  background-color: #dc143cd9;
+  border: none;
+  height: 2em;
+  transition: background-color 0.5s ease-in-out;
+  }
+  .updateCheck:hover {
+  background-color: #95102b;
+  color: whitesmoke;
+  
+  } 
+
+  .corb{
+    width: 2em;
+  }
+
+
+.list {
+    list-style-type: none;
+    margin-top: 1em; 
+}
+.view {
+    list-style-type: none;
+    margin-top: 1em; 
+}
+
+.list a{
+    color: #444444;
+    text-decoration: none;   
+}
+.view a{
+    color: #444444;
+    text-decoration: none; 
+    border-bottom: 1px solid gainsboro;  
+}
+.view a:hover{
+    color: #4B5320;
+    text-decoration: none; 
+    border-bottom: 1px solid #4B5320;  
+}
+.list a:hover{
+    color: #4B5320;
+}
+.list sup{
+    font-size: 1em;
+}

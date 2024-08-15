@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="profile-page">
+        <div class="profile-header">
+          <div class="profile-picture">
+            <img src="https://cdn-icons-png.flaticon.com/128/13878/13878098.png" alt="Profile Picture">
+          </div>
+          <div class="profile-info">
+            <h1>{{authService.getCurrentUser().name}}</h1>
+            <p> {{authService.getCurrentUser().email}}</p>
+          </div> 
+          <div>
+            <nav>
+            <ul class="list">
+              <li><a routerLink="basket"><img src="https://cdn-icons-png.flaticon.com/128/8826/8826229.png" alt="" class="corb"></a><sup>{{authService.basket.length}}</sup></li>
+            </ul>
+          </nav>
+        </div>
+        </div>
+        <ul class="view">
+            <li><a routerLink="event">view Events</a></li>
+            <li><a routerLink="orders">Orders</a></li>
+            </ul>
+      <section id="baskorder" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+          <router-outlet #o="outlet"></router-outlet>
+      </section>      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+         
+<!--
+<div class="account-top">
+    <img class="accountLogo" src="https://cdn-icons-png.flaticon.com/128/13878/13878098.png" alt="">
+</div>
+  <div class="acct">
+    <ul class="items-attributes">
+        <li  class="it-attributes"><i></i>Name <span class="spa"> {{authService.getCurrentUser()}}</span></li>
+        <li   class="it-attributes"><i></i>Email <span class="spa"> {{authService.getCurrentUser().email}}</span></li>
+        <li class="it-attributes"><i></i>Tel <span class="spa"> {{authService.getCurrentUser().contact}}</span></li>
+        <li  class="it-attributes"><i></i>address <span class="spa"> {{authService.getCurrentUser().adress}}</span></li>
+    </ul>
+</div>-->
+  

@@ -27,7 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/app/menu.js"]
+            "scripts": ["src/app/menu.js","src/app/game.js"]
           },
           "configurations": {
             "production": {

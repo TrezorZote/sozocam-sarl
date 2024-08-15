@@ -1,0 +1,19 @@
+<section class="container">
+    <p>you don't have an account? <a routerLink="/sign-up-step1" routerLinkActive="active">Sign Up</a></p>
+    <h2>Sign In</h2>
+    <form>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" #email="ngModel" ngModel name="email" placeholder="temliz " maxlength="28" required>
+      </div>
+      <br>
+      <div>
+        <label for="password">Password</label>
+        <input type="number" #password="ngModel" ngModel name="password" placeholder="12345 " maxlength="28" required>
+      </div>
+      <br>
+      <div class="postBtn">
+      <button class="submit" type="submit" (click)="onSubmit(email.value,password.value)">Sign In</button>
+      </div>
+    </form>
+</section>

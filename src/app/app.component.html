@@ -2,34 +2,35 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="app.component.css">
-  l
+  
   <script src="menu.js"></script>
+  <script src="game.js"></script>
   <body id="markSec">
   <div class="navbar" >
-            <h2  class="navbar-logo"  id="logo">Sozo<span>cam</span></h2> 
-           <img  class="menu-btn" id="menuCta"   src="https://cdn-icons-png.flaticon.com/128/4856/4856386.png" alt="menu">
+            <h2  class="navbar-logo"  id="logo">Tem<span>liz</span></h2> 
+           <img  class="menu-btn" id="menuCta"   src="https://cdn-icons-png.flaticon.com/128/8212/8212733.png" alt="menu">
            <nav >
                <img  class="exit-btn" id="exitCta" src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"    alt="exit menu">
-           <ul class="navbar-menu">
-            <li><a href="#aboutApp">About</a></li>
-            <li><a href="#foot">Contact</a></li>
+            <ul class="navbar-menu">
+            <li *ngIf="authentificationService.getCurrentUser().loggedIn==false"><a routerLink="/sign-in" routerLinkActive="active">Sign In</a></li>
+            <li *ngIf="authentificationService.getCurrentUser().loggedIn==false"><a routerLink="/sign-up-step1" routerLinkActive="active">Sign Up</a></li>
+            <li *ngIf="authentificationService.getCurrentUser().loggedIn==true"><a routerLink="/profile" routerLinkActive="active">Events</a></li>
+            <li *ngIf="authentificationService.getCurrentUser().loggedIn==true"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+            <li *ngIf="authentificationService.getCurrentUser().loggedIn==true"><a (click)="onOpenModal('out')">Sign Out</a></li>
            </ul>
            </nav>
     </div>
      <br id="aboutApp">
-     <br>
-     <br>
-    <section class="marketing">
-      <div class="logoss">
-     <img class="clothLogo" src="https://cdn-icons-png.flaticon.com/128/1048/1048334.png" alt="">
-     <img class="carLogo"  src="https://cdn-icons-png.flaticon.com/128/1287/1287151.png" alt="">
-     <img class="phoneSell" src="https://cdn-icons-png.flaticon.com/128/4490/4490381.png" alt="">
-     <img class="houseLogo" src="https://cdn-icons-png.flaticon.com/128/2827/2827410.png" alt="">
-     <img class="laptopSell" src="https://cdn-icons-png.flaticon.com/128/3322/3322056.png" alt="">
-     
-    </div>
-   
-    <P> Bienvenue sur le site de Sozocam.
+    <section class="marketing" id="main-container">
+      <!--<div class="logoss">
+        <img class="clothLogo" src="https://cdn-icons-png.flaticon.com/128/1048/1048334.png" alt="">
+        <img class="carLogo"  src="https://cdn-icons-png.flaticon.com/128/1287/1287151.png" alt="">
+        <img class="phoneSell" src="https://cdn-icons-png.flaticon.com/128/4490/4490381.png" alt="">
+        <img class="houseLogo" src="https://cdn-icons-png.flaticon.com/128/2827/2827410.png" alt="">
+        <img class="laptopSell" src="https://cdn-icons-png.flaticon.com/128/3322/3322056.png" alt="">
+       </div>
+      -->
+   <!-- <P> Bienvenue sur le site de Sozocam.
        nous sommes actuellement <span> <b>en Solde!!!</b> </span>
         nous somme situe enface du dispensaire Mvogada cliquez sur
         <a style="color: orangered; "  class="findTag"  (click)="onOpenModal('findLoc')">google<span style="color: green;">map</span> </a>
@@ -92,57 +93,48 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
-  <br>
+-->
 <br>
+<div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</div>
+<br>
+<br>
+<br>
+</section>
 
-     <!--find location-->
-<div  class="modal fade" id="locationForm" tabindex="-1" role="dialog" aria-labelledby="updateProduct" aria-hidden="true">
+<!--confirm log out-->
+<div  class="modal fade" id="out" tabindex="-1" role="dialog" aria-labelledby="updateProduct" aria-hidden="true">
   <div  class="modal-dialog" role="document" style="background-color: white; margin-top: 3em;margin-left: .5em; height: 11em;">
     <div class="modal-content" >
       <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close">
         <span aria-hidden="true">&times;</span>
       </button>
-<section class="contact-right" id="findLocation">
-  <h3>Find <span>Location</span> : </h3> <img class="locationLogo" src="https://cdn-icons-png.flaticon.com/128/854/854878.png" alt="">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.
-        750358337456!2d11.527202299999999!3d3.8636538!2m3!1f0!2f0!3f0!3m2!1i1024!2
-          i768!4f13.1!3m3!1m2!1s0x108bc57e6697e331%3A0xe7110a385d74f3b6!2sH%C3%B4pital
-           %20De%20District%20De%20Mvog%20Ada!5e0!3m2!1sen!2sde!4v1672405386022!5m2!1sen
-             !2sde" width="600" height="450" style="border:0;" allowfullscreen=""
-         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
-</div>
-</div>
+      <h4 style="font-family: Trebuchet MS;">confirm sign out?</h4>
+      <div class="postBtn">
+        <button class="submit" type="submit" (click)="signOut()">Yes</button>
+        <button class="submit" (click)="back()">back</button>
+      </div>
+    </div>
+    </div>
 </div>
 
-    </section>
-<br>
-<br>
 
 <!--footer-->
-<footer id="foot" class="footer-section">
-       <div class="cta-text">
-         <h6 style="color: rgb(196, 196, 196);">Lieu   <span> face Dispensaire Mvogada</span></h6>
-       </div>
-       <div class="cta-text">
-         <h6 style="color:rgb(196, 196, 196);">Tel  <span>+237 677649958</span></h6>
-           
-       </div>
-       <div class="cta-text">
-           <h6 style="color: rgb(196, 196, 196);">Email 
-             <span><a style="text-decoration: none; color:rgba(129, 129, 255, 0.799);"
-               href="mailto:trezorzote@gmail.com">trezorzote@gmail.com</a></span></h6>
-       </div>
-       <div class="cta-text">
-        <h6 style="color: rgb(196, 196, 196);">Icons
-          <span><a style="text-decoration: none; color:rgba(129, 129, 255, 0.799);"
-            href="https://www.freepik.com/?_gl=1*ss5kvu*fp_ga*MTQ4MTU4ODA4Ni4xNjcwNTQ1MDY4*fp_ga_1ZY8468CQB*MTY3MjQyNjM2OS43LjEuMTY3MjQyNzg1Ni4zOC4wLjA.*test_ga*MTQ4MTU4ODA4Ni4xNjcwNTQ1MDY4*test_ga_523JXC6VL7*MTY3MjQyNjM2OS43LjEuMTY3MjQyNzg1Ni4zOC4wLjA.">Freepik</a></span></h6>
-    </div>
-       
+  <div class="bott">
+    <footer id="foot" class="footer-section">
+     <div class="cta-text">
+       <h6 style="color: rgb(196, 196, 196);">Location   <span>Germany NRW </span></h6>
+     </div>
+     <div class="cta-text">
+         <h6 style="color: rgb(196, 196, 196);">Email 
+           <span><a style="text-decoration: none; color:rgba(210, 105, 30, 0.859);"
+             href="mailto:trezorzote@gmail.com">trezorzote&#64;gmail.com</a></span></h6>
+     </div>
+     
    <div class="copyright-text">
-       <p style="text-align: center; margin-bottom: 0; "> Sozocam sarl Copyright &copy; 2022, tout droit reserver</p>
+     <p style="text-align: center; margin-bottom: 0; "> Temliz Enterprise &copy; 2023, all rights reserved</p>
    </div>
-
-  </footer>
-  </body>
+   
+   </footer>
+   </div>

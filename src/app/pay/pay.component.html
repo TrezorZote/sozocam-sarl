@@ -1,0 +1,20 @@
+<div class="payment-container">
+    <h2>Select Payment Method</h2>
+    <div class="payment-methods">
+        <label>
+            <input type="button" name="paymentMethod" value="creditCard">
+            Credit Card
+        </label>
+        <label>
+            <input type="button" name="paymentMethod" value="paypal">
+            PayPal
+        </label>
+        <label>
+            <input type="button" name="paymentMethod" value="bankTransfer">
+            Bank Transfer
+        </label>
+    </div>
+    <div class="basket-total">
+        Total <span id="totalAmount">${{this.getSum()}}</span>
+    </div>
+</div>
