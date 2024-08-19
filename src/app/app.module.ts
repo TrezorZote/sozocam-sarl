@@ -13,6 +13,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { BasketComponent } from './basket/basket.component';
 import { EventComponent } from './event/event.component';
 import { PayComponent } from './pay/pay.component';
+import { AccountInfoComponent } from './account-info/account-info.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PayComponent } from './pay/pay.component';
     OrdersComponent,
     BasketComponent,
     EventComponent,
-    PayComponent
+    PayComponent,
+    AccountInfoComponent
   ],
   imports: [
     BrowserModule,AppRoutingModule,FormsModule,BrowserAnimationsModule  //import appRoutingModules so this module could be used her

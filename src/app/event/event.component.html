@@ -25,14 +25,12 @@
 </div>
 </div>
 
-<div>
-<div *ngFor="let i of eventsArray" class="post">
+<div class="scroll-container">
+<div *ngFor="let i of eventsArray" class="post" (click)="onOpenModalEdit(i,'moreInfo')">
     <h2>{{i.eventCategory}}</h2>
-    <p> {{i.eventLocation}}   <a (click)="onOpenModalEdit(i,'moreInfo')"class="delete-button" 
-        id="deleteItem" data-placement="top" role="dialog" data-original-title="Delete" ><img  class="deleteItemLogo"
-        id="deleteImage" src="https://cdn-icons-png.flaticon.com/128/6583/6583141.png" alt=""></a>  
-   </p>
-
+    <p> {{i.eventLocation}} </p>
+    <br>
+    <p>{{i.date}}</p>
 </div>
 </div>
 
@@ -73,15 +71,15 @@
     <div class="select-container">
     <form>
         <div>
-          <label for="normal">normal ticket - {{chosenEvent?.prices[0]}}$</label>
+          <label for="normal">normal ticket {{chosenEvent?.prices[0]}}$</label>
           <input type="number" #normal="ngModel" ngModel name="normal"  placeholder="1"   required>
         </div>
         <div>
-          <label for="allaccess">all access ticket - {{chosenEvent?.prices[1]}}$</label>
+          <label for="allaccess">all access ticket {{chosenEvent?.prices[1]}}$</label>
           <input type="number" #allaccess="ngModel" ngModel name="allaccess"  placeholder="1"   required>
         </div>
         <div>
-            <label for="vip">VIP - {{chosenEvent?.prices[2]}}$</label>
+            <label for="vip">VIP {{chosenEvent?.prices[2]}}$</label>
             <input type="number" #vip="ngModel" ngModel name="vip" placeholder="1"  required>
         </div>
         <br>
@@ -93,7 +91,6 @@
 </div>
 </div>
 </div>
-
 </div>
 
 

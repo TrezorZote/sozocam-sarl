@@ -8,18 +8,13 @@
             <h1>{{authService.getCurrentUser().name}}</h1>
             <p> {{authService.getCurrentUser().email}}</p>
           </div> 
-          <div>
-            <nav>
-            <ul class="list">
-              <li><a routerLink="basket"><img src="https://cdn-icons-png.flaticon.com/128/8826/8826229.png" alt="" class="corb"></a><sup>{{authService.basket.length}}</sup></li>
-            </ul>
-          </nav>
         </div>
+        <div class="scroll-container">
+            <li class="scrollam"><a routerLink="event">view Events</a></li>
+            <li class="scrollam"><a routerLink="orders">Orders</a></li>
+            <li class="scrollam"><a routerLink="account-info">Account</a></li>
+            <li class="scrollam"><a routerLink="basket">Basket ({{authService.basket.length}})</a></li> 
         </div>
-        <ul class="view">
-            <li><a routerLink="event">view Events</a></li>
-            <li><a routerLink="orders">Orders</a></li>
-            </ul>
       <section id="baskorder" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
           <router-outlet #o="outlet"></router-outlet>
       </section>      

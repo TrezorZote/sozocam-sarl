@@ -1,20 +1,22 @@
 <section class="container">
-    <h2>Sign Up Password</h2>
+    <h4>Sign Up Password</h4>
     <br>
     <form>
       <div>
         <label for="password">Password</label>
-        <input type="number" #password="ngModel" ngModel name="password" placeholder="enter password... " maxlength="28" required>
+     <input type="text" #password="ngModel" ngModel name="password" placeholder="enter password... " maxlength="28" required>
+     <h6 class="error-message" *ngIf="passwordCheck==false||(password.invalid&&password.touched)">must be longer than 8 characters and contain atleast one of each A-Z, a-z, 0-9 @$!%*?&...</h6>
       </div>
       <div>
         <label for="Repasswword">Repeat Password</label>
-        <input type="number" #repassword="ngModel" ngModel name="repassword" placeholder="repeat password... " maxlength="28" required>
-      </div>
+        <input type="text" #repassword="ngModel" ngModel name="repassword" placeholder="repeat password... " maxlength="28" required>
+        <h6 class="error-message" *ngIf="sameCheck==false||(repassword.invalid&&repassword.touched)">password must be same</h6>
+    </div>
       <br>
       <div class="term">
         <div class="box"><input type="checkbox" checked></div> 
-        <label for="terms" class="lab">
-            I agree to the <a href="#" class="link">Terms of Service</a>.</label>
+        <p class="lab">
+            I agree to the <a href="#" class="link">Terms of Service</a>.</p>
       </div>
       <br>
       <div class="postBtn">

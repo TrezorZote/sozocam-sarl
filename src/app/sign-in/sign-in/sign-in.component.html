@@ -4,13 +4,15 @@
     <form>
       <div>
         <label for="email">Email</label>
-        <input type="email" #email="ngModel" ngModel name="email" placeholder="temliz " maxlength="28" required>
-      </div>
+        <input type="email" #email="ngModel" ngModel name="email" placeholder="temliz@mail.com" maxlength="28" required>
+        <h6 *ngIf="emailCheck==false||(email.invalid&&email.touched)" class="error-message">not a valid email</h6>
+    </div>
       <br>
       <div>
         <label for="password">Password</label>
-        <input type="number" #password="ngModel" ngModel name="password" placeholder="12345 " maxlength="28" required>
-      </div>
+        <input type="text" #password="ngModel" ngModel name="password" placeholder="temliz " maxlength="28" required>
+        <h6 class="error-message" *ngIf="passwordCheck==false||(password.invalid&&password.touched)">must be of atleast 5 characters</h6>
+    </div>
       <br>
       <div class="postBtn">
       <button class="submit" type="submit" (click)="onSubmit(email.value,password.value)">Sign In</button>

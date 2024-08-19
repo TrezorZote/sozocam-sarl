@@ -27,13 +27,13 @@ export class AuthentificationService {
    
     private example:Transaction[]=[new Transaction(1,10000,"Afro nation 2023","Aug 12, 2023",0,true),new Transaction(2,10000,"Afroland Festival 2023","Aug 13, 2023",0,true)];
    
-    private currentUser: Person = new Person(1,100000,"Christa Roonaldo","Portugal Lisboa","temliz",12345,70000,this.example,false);
+    private currentUser: Person = new Person(1,100000,"Christa Ronaldo","Portugal Lisboa street 7","temliz@mail.com","temliz",70000,this.example,false);
 
-    private persons:Person[]=[new Person(1,100000,"Christa Roonaldo","Portugal Lisboa","temliz",12345,70000,this.example,false)];
+    private persons:Person[]=[this.currentUser];
     public basket:Basket[]=[];
     private count :number=2;
 
-    signIn(email: string, password: number):boolean {
+    signIn(email: string, password: string):boolean {
      // const him = this.users.find(u => u.email === email && u.password === password);
       const user= this.persons.find(p => p.email === email && p.password === password);
       if (user) {
@@ -83,6 +83,22 @@ export class AuthentificationService {
       return this.basket;
     }
 
+    deleteAccount():boolean{
+      let index = 0;
+     var  removed :Person[]=[];
+      this.persons.forEach(element => {
+        if(element.email==this.currentUser.email){
+          removed = this.persons.splice(index,1);
+        }
+        index++;
+      });
+      if(removed[0] != null){
+       return true;
+      }
+      else{
+         return false;
+        }
+    }
 
       signOut():void{
       if(this.currentUser){

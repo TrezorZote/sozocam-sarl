@@ -1,14 +1,16 @@
 <section class="container">
-    <h2>Sign Up Address</h2>
+    <h4>Sign Up Address</h4>
     <br>
     <form>
       <div>
         <label for="street">Street and House number</label>
         <input type="text" #street="ngModel" ngModel name="street" placeholder="aayoo str 23... " maxlength="28" required>
+        <h6 class="error-message" *ngIf="streetCheck==false||(street.invalid&&street.touched)">not a valid input</h6>
       </div>
       <div>
         <label for="postal">postal Code</label>
         <input type="number" #postal="ngModel" ngModel name="postal" placeholder="postal code... " maxlength="28" required>
+        <h6 class="error-message" *ngIf="postalCheck==false||(postal.invalid&&postal.touched)">not a valid input</h6>
       </div>
       <br>
       <br>

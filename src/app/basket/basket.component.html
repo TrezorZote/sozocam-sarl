@@ -8,8 +8,10 @@
       <p>{{items.event.eventDescription}}</p>
       <p></p>
     </div>
-    <p *ngIf="this.getSum()>0"><a class="pay" (click)="onOpenModal('payment')">continue to pay  </a>{{getSum()}}$<p>
-
+    <br>
+    <div>
+    <p *ngIf="this.getSum()>0"><a class="pay" (click)="onOpenModal('payment')">continue to pay {{getSum()}}$</a><p>
+    </div>
 
     <!--select payment method-->
 <div  class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="updateProduct" aria-hidden="true">
@@ -25,7 +27,7 @@
                    <img (click)="this.authService.addOrder(this.authService.basket[0])" src="https://cdn-icons-png.flaticon.com/128/179/179457.png" alt="">
                 </label>
                 <label>
-                    <img (click)="this.authService.addOrder(this.authService.basket[0])"  src="https://cdn-icons-png.flaticon.com/128/196/196566.png" alt="">
+                    <img class="pal" (click)="this.authService.addOrder(this.authService.basket[0])"  src="https://cdn-icons-png.flaticon.com/128/196/196566.png" alt="">
                 </label>
                 <label>
                    <img (click)="this.authService.addOrder(this.authService.basket[0])"  src="https://cdn-icons-png.flaticon.com/128/38/38978.png" alt="">

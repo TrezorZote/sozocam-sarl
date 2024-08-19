@@ -1,8 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Strait&display=swap');
+
 .container {
     background: white;
     margin: 3em auto 2.5em auto;
     padding: 1em;
     width: 100%;
+    font-family: 'Strait';
   }
 
   .profile-page {
@@ -24,8 +28,8 @@
   
   .profile-picture img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
   }
   
@@ -86,12 +90,32 @@
     width: 2em;
   }
 
+  
+.scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px;
+    gap: 20px; /* Space between cards */
+    background-color: #fff;
+}
+
+.scrollam{
+    cursor: pointer;
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+   list-style-type: none;
+   color: #777777;
+   border: 1px solid gainsboro;
+   padding: 5px;
+}
+.scrollam:hover{
+    background-color: whitesmoke;
+}
+.scrollam a{
+    color: #777777;
+    text-decoration: none;   
+}
 
 .list {
-    list-style-type: none;
-    margin-top: 1em; 
-}
-.view {
     list-style-type: none;
     margin-top: 1em; 
 }
@@ -100,19 +124,24 @@
     color: #444444;
     text-decoration: none;   
 }
-.view a{
-    color: #444444;
-    text-decoration: none; 
-    border-bottom: 1px solid gainsboro;  
-}
-.view a:hover{
-    color: #4B5320;
-    text-decoration: none; 
-    border-bottom: 1px solid #4B5320;  
-}
-.list a:hover{
-    color: #4B5320;
-}
+
 .list sup{
     font-size: 1em;
+}
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the scrollbar (for horizontal scroll) */
+}
+
+::-webkit-scrollbar-track {
+    background: white; /* Background of the scrollbar track, matching the page background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover */
 }

@@ -5,15 +5,18 @@
     <form>
       <div>
         <label for="name">Name</label>
-        <input type="email" #name="ngModel" ngModel name="name" placeholder="name... " maxlength="28" required>
+        <input type="text" #name="ngModel" ngModel name="name" placeholder="Neymar jr" maxlength="28" required>
+        <h6 class="error-message" *ngIf="nameCheck==false||(name.invalid&&name.touched)">must be of atleast 5 letters</h6>
       </div>
       <div>
         <label for="email">Email</label>
-        <input type="email" #email="ngModel" ngModel name="email" placeholder="email... " maxlength="28" required>
+        <input type="email" #email="ngModel" ngModel name="email" placeholder="ja@bam.com" maxlength="28" required>
+        <h6 class="error-message" *ngIf="emailCheck==false||(email.invalid&&email.touched)">not a valid email</h6>
       </div>
       <div>
         <label for="contact">Contact</label>
-        <input type="tel" #contact="ngModel" ngModel name="contact" placeholder="tel... " maxlength="28" required>
+        <input type="tel" #contact="ngModel" ngModel name="contact" placeholder="+49174... " maxlength="28" required>
+        <h6 class="error-message" *ngIf="contactCheck==false||(contact.invalid&&contact.touched)">must be of atleast 8 digits</h6>
       </div>
       <br>
       <div class="postBtn">

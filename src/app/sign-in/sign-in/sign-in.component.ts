@@ -19,7 +19,14 @@ export class SignInComponent {
 */
   constructor(private authentificationService: AuthentificationService, private router: Router) {}
 
-  onSubmit(email:string,password:number) {
+ public emailCheck:boolean=true;
+ public passwordCheck:boolean=true;
+
+  onSubmit(email:string,password:string){
+    if(this.isValidEmail(email)){
+      this.emailCheck=true;
+    if(this.isValidPassword(password)){
+      this.passwordCheck=true;
     if (this.authentificationService.signIn(email,password)) {
       this.router.navigate(['/profile/event']);
     } else {
@@ -33,6 +40,23 @@ export class SignInComponent {
       heightAuto:true
       });
     }
+  }else{
+    this.passwordCheck=false;
   }
+}
+else{
+  this.emailCheck=false;
+}
+}
+
+isValidEmail(email: string): boolean {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email.toLowerCase());
+}
+
+isValidPassword(password: string): boolean {
+  return password.length >= 5;
+}
+
 }
 

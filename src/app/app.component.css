@@ -4,6 +4,9 @@
 @import'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Comforter+Brush&family=Monoton&family=Road+Rage&family=Style+Script&family=Vesper+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Laila&family=Neucha&family=Permanent+Marker&family=Strait&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Strait&display=swap');
+
+
 /*#456345*/
 body {
   /*animation: backgroundAnimation 10s infinite;  background animation*/ 
@@ -42,7 +45,7 @@ section.marketing {
 section.marketing p  {
   text-align: center;
   margin: 1em .9em 2em .2em;
-  font-family: 'Poppins';
+  font-family: 'Strait';
   font-weight: 900;
   font-size: 1.05em;
   color: #151414;
@@ -220,7 +223,6 @@ nav .exit-btn {
 nav .navbar-menu {
   margin-top: 2.9em;
   text-align: center;
-  font-weight: bold;
   margin-right: 1em;
 }
 
@@ -229,15 +231,16 @@ nav .navbar-menu li {
   text-decoration: none;
   display: block;
   cursor: pointer;
-  font-family: 'Comfortaa';
+  font-family: 'Strait';
+  color: #555555;
   text-align: left;
   margin-left: -1.75em;
   margin-top: 1.3em;
-  font-size: 1em;
+  font-size: 1.1em;
   border-bottom: 1px solid #AAAAAA;
 }
 nav .navbar-menu li:hover {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #222222;
 }
 
 nav .navbar-menu a {
@@ -292,8 +295,6 @@ nav ul.navbar-menu a.home {
   }
   .navbar {
     position:-webkit-sticky;
-    background-color:rgb(30, 30, 30);
-    box-shadow: 0 0 .5rem 0 gray;
   }
 
   .navbar .navbar-logo  {
@@ -334,11 +335,12 @@ nav ul.navbar-menu a.home {
   nav ul.navbar-menu li {
     font-weight: lighter;
     font-size: 1em;
-    float: right;
-    font-family: 'Trebuchet MS';
+    font-family: 'Strait';
+    color: #555555;
     margin-right: 4.5em;
     margin-top: 1em;
-    border-bottom: none;
+    padding: 3px;
+    border: none;
   }
   nav ul.navbar-menu li:hover {
     border-bottom: none;
@@ -346,16 +348,16 @@ nav ul.navbar-menu a.home {
   
   nav ul.navbar-menu a {
     text-decoration: none;
-    color: whitesmoke;
+    color: #AAAAAA;
+    transition:color 0.3s ease-in;
   }
   nav ul.navbar-menu a.home {
     text-decoration: none;
-    color: white;
+    color: #AAAAAA;
   }
   
 nav .navbar-menu a:hover {
-  color: white;
-  border-bottom: 1px solid whitesmoke;
+  color: whitesmoke;
 
 }
  
