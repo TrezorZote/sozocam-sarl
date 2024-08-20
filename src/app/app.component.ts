@@ -29,20 +29,7 @@ export class AppComponent implements OnInit  {
     }
   }
 
-  public signOut():void{
-    this.authentificationService.signOut();
-    this.router.navigate(['/sign-in']);
-    Swal.fire({
-      icon: 'success',
-      title: 'signed out',
-      text: 'see you soon',
-      timer: 3000,
-    showConfirmButton: false,
-    width: '400px', // Adjust width as needed
-    heightAuto:true
-   }); 
-    this.getCurrentUser();
-  }
+ 
 
   public back():void{
     this.router.navigate(['/profile']);

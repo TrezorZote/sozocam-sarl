@@ -7,11 +7,12 @@
       <li><span>E-mail</span> {{authServ.getCurrentUser().email}}</li>
       <li> <span>Contact</span> {{authServ.getCurrentUser().contact}}</li>
       <li> <span>Address</span> {{authServ.getCurrentUser().adress}}</li>
-      <li> <span>Password</span> {{authServ.getCurrentUser().password}}</li>
+      <li> <span>Password</span> *******</li>
     </ul>
     </div>
     <br>
    <button class="submit" (click)="deleteAccount()">Delete</button>
+   <button class="submit" (click)="onOpenModal('out')">Sign out</button>
     <button class="submit" (click)="onOpenModal('edit')">edit</button>
   </div>
 
@@ -40,3 +41,18 @@
     </div>
     </div>
     </div>
+
+    <!--confirm log out-->
+<div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
+    <div  class="modal-dialog" role="document" >
+      <div class="modal-content" >
+        <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close" id="out">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4>sign out?</h4>
+        <div class="postBtn">
+          <button class="submit" type="submit" (click)="signOut()">Yes</button>
+        </div>
+      </div>
+      </div>
+  </div>

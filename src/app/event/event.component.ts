@@ -14,19 +14,19 @@ export class EventComponent implements OnInit {
   constructor(public authService:AuthentificationService){
   }
 
-   eventsArray: Event[] = [ new Event(12,692923746,"Joeboy Concert","Joeboy 2k24 europe tour must be there","London O2 arena",12345,[10,20,30],"Dec 12, 2024"),
-    new Event(1,681435264," Burna Boy Concert","Burna Boy europe tour"," Cologne lanxess arena ",12345,[10,20,30],"Oct 22, 2024"),
-    new Event(2,676453624,"Gonzo vibes","Afrobeats Amapiano Dancehall party","Stuttgart str 30",12345,[10,20,30],"Aug 30, 2024"),
-    new Event(3,692923746,"Afro cloud","Afrobeats Amapiano Dancehall party","Bochum Bahnhof str 52",12345,[10,20,30],"Sep 25, 2024"),
-    new Event(4,672204043,"Prime events","Hip Hop Trap Afrobeats Amapiano Dancehall party","Essen borbeck str 14",12345,[10,20,30],"Nov 1, 2024"),
-    new Event(5,622765893,"Bumaye","Afrobeats Amapiano Dancehall party","Hamburg Bahnhof Str 18",12345,[10,20,30],"Oct 10, 2024"),
-    new Event(6,622765893,"Rema Concert","Rema is in Germany come vibe with the afrobeat prince","koln Bahnhof Str 18",12345,[10,20,30],"Aug 27, 2024"),
-    new Event(7,622765893,"Muy Calliente","Afrobeats Latin Reggae Dancehall party","koln Bahnhof Str 18",12345,[10,20,30],"Aug 24, 2024"),
-    new Event(8,622765893,"Bundesligaspiel ticket","Dortmund gegen Bayern der Klassiker","Bayern Bahnhof Str 18",12345,[10,20,30],"Oct 5, 2024"),
-    new Event(9,622765893,"Chris Brown Concert","Chris Breezy under the influence tour vibe with the RnB legend ","Frankfurt Str 18",12345,[10,20,30],"Dec 23, 2024"),
-    new Event(10,692923746,"Gonzo vibes","Afrobeats Amapiano Dancehall party","Bochum nrw alle 52",12345,[10,20,30],"Dec 31, 2024"),
-    new Event(11,692923746,"Afro nation","best of african artists perform live in portugal Burna boy Rema Davido and more","Portugal porto beach",12345,[10,20,30],"Jun 28-29, 2024"),
-    new Event(13,692923746,"Omah lay Concert","Omah lay afrobeat singer performing live","London O2 arena ",12345,[10,20,30],"Aug 23, 2024")];
+   eventsArray: Event[] = [ new Event(12,692923746,"Joeboy Concert","Joeboy 2k24 europe tour must be there","London O2 arena",12345,[10,20,30],"Dec 12, 2024",'https://shorturl.at/kfMci'),
+    new Event(1,681435264," Burna Boy Concert","Burna Boy europe tour"," Cologne lanxess arena ",12345,[10,20,30],"Oct 22, 2024",'https://shorturl.at/03lOg'),
+    new Event(2,676453624,"Gonzo vibes","Afrobeats Amapiano Dancehall party","Stuttgart str 30",12345,[10,20,30],"Aug 30, 2024",'https://shorturl.at/IlBab'),
+    new Event(3,692923746,"Afro cloud","Afrobeats Amapiano Dancehall party","Bochum Bahnhof str 52",12345,[10,20,30],"Sep 25, 2024",'https://shorturl.at/D4gPg'),
+    new Event(4,672204043,"Prime events","Hip Hop Trap Afrobeats Amapiano Dancehall party","Essen borbeck str 14",12345,[10,20,30],"Nov 1, 2024",'https://shorturl.at/SpYn1'),
+    new Event(5,622765893,"Bumaye","Afrobeats Amapiano Dancehall party","Hamburg Bahnhof Str 18",12345,[10,20,30],"Oct 10, 2024",'https://shorturl.at/J7frj'),
+    new Event(6,622765893,"Rema Concert","Rema is in Germany come vibe with the afrobeat prince","koln Bahnhof Str 18",12345,[10,20,30],"Aug 27, 2024",'https://shorturl.at/7pre4'),
+    new Event(7,622765893,"Muy Calliente","Afrobeats Latin Reggae Dancehall party","koln Bahnhof Str 18",12345,[10,20,30],"Aug 24, 2024",'https://shorturl.at/vR6jc'),
+    new Event(8,622765893,"Bundesligaspiel ticket","Dortmund gegen Bayern der Klassiker","Bayern Bahnhof Str 18",12345,[10,20,30],"Oct 5, 2024",'https://shorturl.at/E94kl'),
+    new Event(9,622765893,"Chris Brown Concert","Chris Breezy under the influence tour vibe with the RnB legend ","Frankfurt Str 18",12345,[10,20,30],"Dec 23, 2024",'https://shorturl.at/yuN5w'),
+    new Event(10,692923746,"Latino Gang","  Latin Reggae Bachata Afrobeats Amapiano Dancehall ","Bochum nrw alle 52",12345,[10,20,30],"Dec 31, 2024",'https://shorturl.at/07z86'),
+    new Event(11,692923746,"Afro nation","best of african artists perform live in portugal Burna boy Rema Davido and more","Portugal porto beach",12345,[10,20,30],"Jun 28-29, 2024",'https://shorturl.at/tJQev'),
+    new Event(13,692923746,"Omah lay Concert","Omah lay afrobeat singer performing live","London O2 arena ",12345,[10,20,30],"Aug 23, 2024",'https://shorturl.at/diFU1')];
 
    public chosenEvent: any;
   
@@ -56,10 +56,12 @@ export class EventComponent implements OnInit {
   select(eventToAdd:Event,vip:any,access:any,normal:any):void{
     var prices:number[]=[normal * eventToAdd.prices[0],access* eventToAdd.prices[1],vip* eventToAdd.prices[2]];
     if(this.authService.addToCart(eventToAdd,prices)){
+      const dismiss= document.getElementById('out');
+      dismiss?.click();
       Swal.fire({
         icon: 'success',
-        title: 'added to corb',
-        text: 'event visible in your corb',
+        title: 'added to basket',
+        text: 'event visible in your basket',
         timer: 3000,
       showConfirmButton: false,
       width: '400px', // Adjust width as needed
@@ -119,6 +121,9 @@ if(region.length>=3){
     container?.appendChild(button);
     button.click();
   }
+
+
+
 }
 
 

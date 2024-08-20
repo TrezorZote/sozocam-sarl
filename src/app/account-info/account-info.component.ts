@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthentificationService } from '../service/authentification.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account-info',
@@ -9,10 +10,11 @@ import Swal from 'sweetalert2';
 })
 export class AccountInfoComponent {
 
-  constructor(public authServ:AuthentificationService){}
+  constructor(public authServ:AuthentificationService,public router:Router){}
 
   deleteAccount(){
-   if( this.authServ.deleteAccount()){
+   if(this.authServ.deleteAccount()){
+    this.router.navigate(['/sign-in']);
     Swal.fire({
       icon: 'success',
       title: 'deleted',
@@ -25,6 +27,27 @@ export class AccountInfoComponent {
    }
   }
 
+  public signOut():void{
+    this.authServ.signOut();
+    const dismiss= document.getElementById('out');
+    dismiss?.click();
+    this.router.navigate(['/sign-in']);
+    Swal.fire({
+      icon: 'success',
+      title: 'signed out',
+      text: 'see you soon',
+      timer: 3000,
+    showConfirmButton: false,
+    width: '400px', // Adjust width as needed
+    heightAuto:true
+   }); 
+  }
+
+  
+  public back():void{
+    this.router.navigate(['/profile']);
+  }
+
   public onOpenModal( mode:string):void{
     const container= document.getElementById('main-container');
     const button =document.createElement('button');
@@ -34,6 +57,9 @@ export class AccountInfoComponent {
     
     if(mode==='edit'){
       button.setAttribute('data-target','#edit');
+    }
+    if(mode==='out'){
+      button.setAttribute('data-target','#signout');
     }
    
     container?.appendChild(button);

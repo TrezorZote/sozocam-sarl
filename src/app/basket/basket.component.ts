@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthentificationService } from '../service/authentification.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-basket',
@@ -19,7 +20,6 @@ export class BasketComponent {
   });
   return count;
 }
-
  sumArrayForEach(numbers: number[]):number{
   var sum = 0;
   numbers.forEach(num => {
@@ -27,6 +27,12 @@ export class BasketComponent {
   });
   return sum;
 };
+
+addOrder():void{
+  const dismiss= document.getElementById('out');
+  dismiss?.click();
+  this.authService.addOrder(this.authService.basket[0]);
+}
 
 public onOpenModal( mode:string):void{
   const container= document.getElementById('main-container');

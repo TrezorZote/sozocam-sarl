@@ -14,9 +14,7 @@
             <ul class="navbar-menu">
             <li *ngIf="authentificationService.getCurrentUser().loggedIn==false"><a routerLink="/sign-in" routerLinkActive="active">Sign In</a></li>
             <li *ngIf="authentificationService.getCurrentUser().loggedIn==false"><a routerLink="/sign-up-step1" routerLinkActive="active">Sign Up</a></li>
-            <li *ngIf="authentificationService.getCurrentUser().loggedIn==true"><a routerLink="/profile" routerLinkActive="active">Events</a></li>
             <li *ngIf="authentificationService.getCurrentUser().loggedIn==true"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
-            <li *ngIf="authentificationService.getCurrentUser().loggedIn==true"><a (click)="onOpenModal('out')">Sign Out</a></li>
            </ul>
            </nav>
     </div>
@@ -103,21 +101,6 @@
 <br>
 </section>
 
-<!--confirm log out-->
-<div  class="modal fade" id="out" tabindex="-1" role="dialog" aria-labelledby="updateProduct" aria-hidden="true">
-  <div  class="modal-dialog" role="document" style="background-color: white; margin-top: 3em;margin-left: .5em; height: 11em;">
-    <div class="modal-content" >
-      <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <h4 style="font-family: Trebuchet MS;">confirm sign out?</h4>
-      <div class="postBtn">
-        <button class="submit" type="submit" (click)="signOut()">Yes</button>
-        <button class="submit" (click)="back()">back</button>
-      </div>
-    </div>
-    </div>
-</div>
 
 
 <!--footer-->

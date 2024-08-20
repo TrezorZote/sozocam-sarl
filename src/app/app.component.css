@@ -120,8 +120,9 @@ section.contact-right iframe {
 
 
 .postBtn{
-  display: grid;
-  grid-template-columns: 60px auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
  }
 
  h4{
@@ -142,7 +143,7 @@ section.contact-right iframe {
     cursor: pointer;
     border: 1px solid gray;
     width: 4.5em;
-    margin:1.5em auto auto auto ;
+    margin:1.5em auto auto .5em ;
     background-color:white;
     height: 2em;
     transition: background-color 0.5s ease-in-out;

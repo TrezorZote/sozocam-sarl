@@ -19,20 +19,19 @@
     margin-top: 20px;
   }
   
-  .posts-section h2 {
+  .posts-section h5 {
     color: #4B5320;
-    margin-bottom: 20px;
+    margin: 10px auto;
   }
   
   .post {
     cursor: pointer;
     flex: 0 0 auto; /* Prevent cards from shrinking */
-    width: 250px;
-    height: 200px;
-    background-color: #f9f9f9;
+    width: 150px;
+    height: 300px;
+    background-color: white;
     padding: 15px;
     margin-bottom: 15px;
-    border: 1px solid gainsboro;
   }
   
   .post p {
@@ -40,7 +39,14 @@
   }
 
   .post:hover{
-  background-color: whitesmoke;
+  background-color: #f1f1f1;
+  }
+
+  .shower{
+    margin: -15px 2px auto -15px ;
+    object-fit: contain;
+    width: 149px;
+    border-radius: 4px;
   }
 
 section.contact-right h3 {
@@ -181,11 +187,10 @@ background: white;
 
 .items-attributes {
     list-style-type: none;
-    font-weight: bold;
-    font-size: .85em;
+    font-size: 1em;
     margin-left: -1.8em;
     margin-top: .6em;
-    color:#4B5320;
+    color:#444444;
     letter-spacing: .07em; 
 }
 .it-attributes{
@@ -196,8 +201,7 @@ background: white;
 .spa{
   border-bottom: 1px solid gray;
   color:rgb(56, 87, 8);
-  font-size: 1.05em;
-  font-weight: bolder;
+  font-size: 1em;
 }
 
 
@@ -225,22 +229,11 @@ background: white;
  float: right;
 font-size: 1.6em;
  border: none;
- background-color: #4b5320d1;
+ background-color: white;
  margin: 0 .5em .5em auto;
  cursor: pointer;
  }
 
- .pass label{
-   color:#361500;
- display: block;
- margin-left: .8em;
- margin-bottom: .3em;
-  }
-  .pass{
-    margin-bottom: 1.5em;
-    margin-top: 1em;
-     }
- 
 
 body {
   background-color: white;
@@ -258,24 +251,10 @@ body {
   
   .select-container label {
     display: block;
-    margin-top: 1em;
-    margin-bottom: 0;
-    font-weight: bold;
-    color:#4B5320;
+    margin: 1em 1em 1em 0;
+    color:#444444;
   }
   
-  .select-container input{
-    border-bottom: 1px solid gray;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    margin-bottom: 0;
-    width: 3.5em;
-    height: 2.5em;
-    color: gray;
-    font-size: 1em;
-  }
-
   input[type="file"]{
     display: none;
   }
@@ -329,49 +308,22 @@ input[type="number"]:focus {
             background-color: #555; /* Darker color on hover */
         }
 
-@media only screen and (min-width: 640px) {
-  .locationLogo{
-   display: none;
-  }
-}
-@media only screen and (min-width: 690px) {
 
-  .cards{ 
-    margin-left: 1%;
-      display: grid;
-        grid-template-columns:50% 50%;
-    }
-    .item-card-part1{
-      width: 20em;
-     }
-  }
-@media only screen and (min-width: 1015px) {
-  .cards{ 
-    margin-left: 1%;
-    display: grid;
-      grid-template-columns:33% 33% 33%;
-    }
-  .item-card-part1{
-    width: 20em;
-    margin-left: .4em;
-   }
-}
-@media only screen and (min-width: 1340px) {
-  .cards{ 
-    margin-left: 1%;
-    display: grid;
-      grid-template-columns: 25% 25% 25% 25% ;
-    }
-  }
-              
-  @media only screen and (min-width: 630px) {
-                
+        .number-input {
+            display: flex;
+            align-items: center;
+        }
 
-.locationLogo{
-  display: none;
- 
- }
- 
-.logoss{display: none;
-} 
-}
+        .number-input input[type="number"] {
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            appearance: textfield;
+            text-align: center;
+            width: 50px;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin: 0 5px;
+        }
+       

@@ -27,19 +27,19 @@
 
 <div class="scroll-container">
 <div *ngFor="let i of eventsArray" class="post" (click)="onOpenModalEdit(i,'moreInfo')">
-    <h2>{{i.eventCategory}}</h2>
+    <img class="shower" src="{{i.imagesrc}}" alt="">
+    <h5>{{i.eventCategory}}</h5>
     <p> {{i.eventLocation}} </p>
-    <br>
     <p>{{i.date}}</p>
 </div>
 </div>
 
 
 <!--moreInfo-->
-<div  class="modal fade" id="moreInfo" tabindex="-1" role="dialog" aria-labelledby="updateProduct" aria-hidden="true">
-<div  class="modal-dialog" role="document" style="background-color: white; margin-top: 3em;margin-left: .5em; height: 11em;">
+<div  class="modal fade" id="moreInfo" tabindex="-1" role="dialog" aria-labelledby="moreInfo" aria-hidden="true">
+<div  class="modal-dialog" role="document">
 <div class="modal-content" >
-  <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close">
+  <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close" id="out">
     <span aria-hidden="true">&times;</span>
   </button>
     <div class="item-container1">
@@ -49,20 +49,20 @@
             <div id="carouselExampleSlidesOnly" data-bs-ride="carousel"  class="carousel slide" >
             <div class="carousel-inner" style="background-color: whitesmoke;  height: 16em;" role="listbox" >
               <div class="carousel-item active">
-                <img class="item-rounded-image"  src="https://img.freepik.com/free-psd/holographic-music-band-banner-template_23-2148742145.jpg?size=626&ext=jpg&uid=R89165474&ga=GA1.1.761342888.1672160419&semt=ais" alt="">
+                <img class="item-rounded-image"  src="{{chosenEvent?.imagesrc}}" alt="">
               </div>
               <div  class="carousel-item" >
-                <img class="item-rounded-image"  src="https://media.istockphoto.com/id/1127652268/de/vektor/night-club-jugendliche-haben-spa%C3%9F-sommerabend.jpg?s=612x612&w=0&k=20&c=AKfUCDI7uT2YNXh9OzynjM4glAplqtrfhG8Tb2J5gxY=" alt="">
+                <img class="item-rounded-image"  src="{{chosenEvent?.imagesrc}}" alt="">
               </div>
-              <div *ngIf="chosenEvent.contact!==null"  class="carousel-item">
-                <img class="item-rounded-image" src="https://img.freepik.com/free-vector/happy-people-having-fun-rock-concert-flat-illustration_74855-5266.jpg?size=626&ext=jpg&ga=GA1.1.761342888.1672160419&semt=sph" alt="">
+              <div class="carousel-item">
+                <img class="item-rounded-image" src="{{chosenEvent?.imagesrc}}" alt="">
               </div>
             </div>
           </div>
             <ul class="items-attributes">
-              <li class="it-attributes"><i></i>Category <span class="spa">- {{chosenEvent?.eventCategory}}</span></li>
-              <li class="it-attributes"><i></i>Description <span class="spa">- {{chosenEvent?.eventDescription}}</span></li>
-              <li class="it-attributes"><i></i>location <span class="spa">- {{chosenEvent?.eventLocation}}</span></li>
+              <li class="it-attributes"><i></i>{{chosenEvent?.eventCategory}}</li>
+              <li class="it-attributes"><i></i> {{chosenEvent?.eventDescription}}</li>
+              <li class="it-attributes"><i></i><span class="spa">{{chosenEvent?.eventLocation}}</span></li>
             </ul>
           </div>
         </div>
@@ -70,17 +70,17 @@
     </div>
     <div class="select-container">
     <form>
-        <div>
+        <div class="number-input">
           <label for="normal">normal ticket {{chosenEvent?.prices[0]}}$</label>
-          <input type="number" #normal="ngModel" ngModel name="normal"  placeholder="1"   required>
+          <input type="number" #normal="ngModel" ngModel name="normal"  id="one" placeholder="0" min="0">
         </div>
-        <div>
-          <label for="allaccess">all access ticket {{chosenEvent?.prices[1]}}$</label>
-          <input type="number" #allaccess="ngModel" ngModel name="allaccess"  placeholder="1"   required>
+        <div class="number-input">
+          <label for="allaccess">allarea ticket {{chosenEvent?.prices[1]}}$</label>
+          <input type="number" #allaccess="ngModel" ngModel name="allaccess"  id="two" placeholder="0" min="0">
         </div>
-        <div>
-            <label for="vip">VIP {{chosenEvent?.prices[2]}}$</label>
-            <input type="number" #vip="ngModel" ngModel name="vip" placeholder="1"  required>
+        <div class="number-input">
+            <label for="vip">VIPs ticket {{chosenEvent?.prices[2]}}$</label>
+            <input type="number" #vip="ngModel" ngModel name="vip" id="three" placeholder="0" min="0">
         </div>
         <br>
         <div class="postBtn">
@@ -92,5 +92,3 @@
 </div>
 </div>
 </div>
-
-

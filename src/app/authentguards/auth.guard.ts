@@ -19,7 +19,7 @@ item is not set to true or when we log out the session
 export class AuthGuard implements CanActivate {
 
   // need to add authentification service to grab the sessionstorage value in isloggedin and to route
-  constructor(private authService: AuthentificationService, private router: Router){}
+  constructor(public authService: AuthentificationService, public router: Router){}
 
   canActivate(
     route: ActivatedRouteSnapshot,

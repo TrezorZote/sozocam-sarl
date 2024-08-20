@@ -80,7 +80,20 @@ input[type="number"]:focus {
   outline: none; /* Remove default focus outline */
 }
 
+h4{
+    color: #444444;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Strait';
+}
 
+#signout{
+    border: none;
+  border-radius: 8px;
+  width: 22em;
+  height: 22em;
+}
 
 .postBtn{
     align-items: center;
@@ -89,7 +102,7 @@ input[type="number"]:focus {
     }
   
     .submit {
-        color: #444444;
+        color: #777777;
         font-family: 'Strait';
         cursor: pointer;
         border: 1px solid gray;

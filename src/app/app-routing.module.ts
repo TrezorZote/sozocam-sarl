@@ -26,8 +26,8 @@ const routes: Routes = [
   { path: 'sign-up-step2', component: SignUpStepTwoComponent },
   { path: 'sign-up-step3', component: SignUpStepThreeComponent },
   { path: 'profile', component: AccountProfileComponent,canActivate: [AuthGuard], children: [
-    { path: 'orders', component: OrdersComponent }, { path: 'account-info', component: AccountInfoComponent },
-    { path: 'basket', component: BasketComponent,children:[{path:'pay',component:PayComponent}]},{ path: 'event', component: EventComponent }
+    { path: 'orders', component: OrdersComponent,canActivate: [AuthGuard] }, { path: 'account-info', component: AccountInfoComponent,canActivate: [AuthGuard]},
+    { path: 'basket', component: BasketComponent,canActivate: [AuthGuard],children:[{path:'pay',component:PayComponent}]},{ path: 'event', component: EventComponent,canActivate: [AuthGuard] }
   ]},
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' }
 ];
