@@ -12,7 +12,7 @@ import { FormsModule, NgModel } from '@angular/forms';
 import { OrdersComponent } from './orders/orders.component';
 import { BasketComponent } from './basket/basket.component';
 import { EventComponent } from './event/event.component';
-import { PayComponent } from './pay/pay.component';
+import { AboutComponent } from './About/about.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
 
 @NgModule({
@@ -26,7 +26,7 @@ import { AccountInfoComponent } from './account-info/account-info.component';
     OrdersComponent,
     BasketComponent,
     EventComponent,
-    PayComponent,
+    AboutComponent,
     AccountInfoComponent
   ],
   imports: [

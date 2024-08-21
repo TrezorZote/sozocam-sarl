@@ -6,7 +6,8 @@
   }
   
   .posts-section h2 {
-    color: #4B5320;
+    color:#555;
+    font-size: 1.5em;
     margin-bottom: 20px;
   }
   
@@ -47,11 +48,6 @@ background-color: whitesmoke;
     align-items: center;
 }
 
-.payment-container h3 {
-  color: #555555;
-    margin-top: 0;
-}
-
 .payment-methods {
     margin: 20px 0;
 }
@@ -61,24 +57,26 @@ background-color: whitesmoke;
      padding: 10px;
      margin: 1em auto;
      width: 15em;
-     height: 4em;
-     background-color: white;
-     border: 1px solid gray;
+     height: 4.5em;background-color: white;
+     border: 1px solid #777;
      text-align: center; 
      justify-content: center;
      align-items: center;
+     cursor: pointer;
 }
+.payment-methods label:hover {
+  background-color: gainsboro;
+}
+
 
 .payment-methods img{
   cursor: pointer;
-  width: 3em;
-}
-.pal{
-  width: 7em;
+  width: 3.5em;
 }
 
+
 .basket-total {
-  color: #555555;
+  color: #555;
     margin-top: 20px;
     font-size: 18px;
    font-family: 'Trebuchet MS';
@@ -86,10 +84,14 @@ background-color: whitesmoke;
 
 .closeDelete{
   float: right;
- font-size: 1.8em;
+  font-size: 3em;
   border: none;
-  background-color: #4b5320cd ;
+  background-color: white;
   margin: 0 .5em .5em auto;
   cursor: pointer;
+  opacity: 0.5;
   }
  
+  h3{
+    color: #555;
+  }

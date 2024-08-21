@@ -9,7 +9,7 @@ import { AuthGuard } from './authentguards/auth.guard';
 import { OrdersComponent } from './orders/orders.component';
 import { BasketComponent } from './basket/basket.component';
 import { EventComponent } from './event/event.component';
-import { PayComponent } from './pay/pay.component';
+import { AboutComponent} from './About/about.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
 
 //this module specifies routing paths used in the app.modules file 
@@ -27,8 +27,9 @@ const routes: Routes = [
   { path: 'sign-up-step3', component: SignUpStepThreeComponent },
   { path: 'profile', component: AccountProfileComponent,canActivate: [AuthGuard], children: [
     { path: 'orders', component: OrdersComponent,canActivate: [AuthGuard] }, { path: 'account-info', component: AccountInfoComponent,canActivate: [AuthGuard]},
-    { path: 'basket', component: BasketComponent,canActivate: [AuthGuard],children:[{path:'pay',component:PayComponent}]},{ path: 'event', component: EventComponent,canActivate: [AuthGuard] }
+    { path: 'basket', component: BasketComponent,canActivate: [AuthGuard]},{ path: 'event', component: EventComponent,canActivate: [AuthGuard] }
   ]},
+  {path:'about',component:AboutComponent},
   { path: '', redirectTo: '/sign-in', pathMatch: 'full' }
 ];
 

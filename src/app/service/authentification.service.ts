@@ -25,9 +25,9 @@ export class AuthentificationService {
 
     private users: User[] = [{'email':'temliz','password':'12345','name':'ulrich Tresor'}];
    
-    private example:Transaction[]=[new Transaction(1,10000,"Afro nation 2023","Aug 12, 2023",0,true),new Transaction(2,10000,"Afroland Festival 2023","Aug 13, 2023",0,true)];
+    private example:Transaction[]=[new Transaction(1,55,"Afro nation 2023","Aug 12, 2023",0,true),new Transaction(2,100,"Afroland Festival 2023","Aug 13, 2023",0,true)];
    
-    private currentUser: Person = new Person(1,100000,"Christa Ronaldo","Portugal Lisboa street 7","temliz@mail.com","temliz",70000,this.example,this.isLoggedIn());
+    private currentUser: Person = new Person(1,145897684563,"Christa Ronaldo","Portugal Lisboa street 7","temliz@mail.com","temliz",70000,this.example,this.isLoggedIn());
 
     private persons:Person[]=[this.currentUser];
     public basket:Basket[]=[];
@@ -135,7 +135,7 @@ return dateString;
 
 
 addOrder(basketItem:Basket):boolean{
-  var newTransaction:Transaction= new Transaction(1,this.sumArrayForEach(basketItem.prices),basketItem.event.eventDescription,this.currentDate(),0,true)
+  var newTransaction:Transaction= new Transaction(1,this.sumArrayForEach(basketItem.prices),basketItem.event.eventCategory+' '+basketItem.event.eventLocation,this.currentDate(),0,true)
   this.currentUser.transactions.push(newTransaction);
   this.currentUser.transactions.reverse();
   this.basket=[];

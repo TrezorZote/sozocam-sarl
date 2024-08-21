@@ -3,6 +3,7 @@
     <div *ngFor="let posts of authService.getCurrentUser().transactions" class="post">
       <h2> {{posts.date}}</h2>
       <p>{{posts.description}}</p>
+      <p>{{posts.sent}}$</p>
     </div>
   </div>
 

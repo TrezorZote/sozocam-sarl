@@ -3,10 +3,12 @@
   }
   
   .posts-section h2 {
-    color: #4B5320;
+    color:#555;
+    font-size: 1.5em;
     margin-bottom: 20px;
   }
   
+
   .post {
     background-color: #f9f9f9;
     padding: 15px;

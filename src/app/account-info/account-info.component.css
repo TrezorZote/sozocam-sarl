@@ -7,7 +7,8 @@
   }
   
   .posts-section h2 {
-    color: #4B5320;
+    color:#555;
+    font-size: 1.5em;
     margin-bottom: 20px;
   }
   
@@ -38,16 +39,15 @@
   .modal-content{
     padding: 20px;
 }
-
-   .closeDelete{
+.closeDelete{
     float: right;
-   font-size: 1.6em;
+    font-size: 3em;
     border: none;
-    background-color: #4b5320d1;
+    background-color: white;
     margin: 0 .5em .5em auto;
     cursor: pointer;
+    opacity: 0.5;
     }
-   
   
    label {
     display: block;

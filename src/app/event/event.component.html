@@ -1,14 +1,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="event.component.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+   integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
   <div class="posts-section" id="main-container">
 <form>
   <div class="center">
-  <input class="regionSearch" type="search" #region="ngModel" ngModel name="region" required   placeholder="region of preference...">
- <button class="regionFilter" (click)="byRegion(region.value)">ok</button>
+ <button class="apply" (click)="onOpenModal('filter')">Filter</button>
  </div>
-
 </form>
 <form>
 <div class="center">
@@ -17,24 +21,56 @@
 </form>
 
 <br>
+<section *ngIf="this.filterarray[0]!=null">
+    <h5>Search</h5>
+    <div class="scroll-container">
+        <div *ngFor="let i of filterarray" class="post" (click)="onOpenModalEdit(i,'moreInfo')">
+            <img class="shower" src="{{i.imagesrc}}" alt="">
+            <h6>{{i.eventCategory}}</h6>
+            <p> {{i.eventLocation}} </p>
+            <p>{{i.date}}</p>
+        </div>
+        </div>
+    </section>
 
-<div *ngIf="eventsArray?.length==0" class="noItems">
-  <div class="alerter" role="alert">
-    <img src="https://cdn-icons-png.flaticon.com/128/14755/14755007.png" alt="">
-    <h4>Event not available</h4>
-</div>
-</div>
 
+<section>
+<h5>Recommended</h5>
 <div class="scroll-container">
 <div *ngFor="let i of eventsArray" class="post" (click)="onOpenModalEdit(i,'moreInfo')">
     <img class="shower" src="{{i.imagesrc}}" alt="">
-    <h5>{{i.eventCategory}}</h5>
+    <h6>{{i.eventCategory}}</h6>
     <p> {{i.eventLocation}} </p>
     <p>{{i.date}}</p>
 </div>
 </div>
+</section>
 
+<section>
+<h5>Concerts</h5>
+<div class="scroll-container">
+    <div *ngFor="let i of concert" class="post" (click)="onOpenModalEdit(i,'moreInfo')">
+        <img class="shower" src="{{i.imagesrc}}" alt="">
+        <h6>{{i.eventCategory}}</h6>
+        <p> {{i.eventLocation}} </p>
+        <p>{{i.date}}</p>
+    </div>
+    </div>
+</section>
 
+<section>
+<h5>Parties</h5>
+<div class="scroll-container">
+    <div *ngFor="let i of parties" class="post" (click)="onOpenModalEdit(i,'moreInfo')">
+        <img class="shower" src="{{i.imagesrc}}" alt="">
+        <h6>{{i.eventCategory}}</h6>
+        <p> {{i.eventLocation}} </p>
+        <p>{{i.date}}</p>
+    </div>
+    </div>
+</section> 
+
+<br>
 <!--moreInfo-->
 <div  class="modal fade" id="moreInfo" tabindex="-1" role="dialog" aria-labelledby="moreInfo" aria-hidden="true">
 <div  class="modal-dialog" role="document">
@@ -47,7 +83,7 @@
         <div class="item-column1">
           <div class="item-card-part1">
             <div id="carouselExampleSlidesOnly" data-bs-ride="carousel"  class="carousel slide" >
-            <div class="carousel-inner" style="background-color: whitesmoke;  height: 16em;" role="listbox" >
+            <div class="carousel-inner" role="listbox" >
               <div class="carousel-item active">
                 <img class="item-rounded-image"  src="{{chosenEvent?.imagesrc}}" alt="">
               </div>
@@ -60,8 +96,9 @@
             </div>
           </div>
             <ul class="items-attributes">
-              <li class="it-attributes"><i></i>{{chosenEvent?.eventCategory}}</li>
+              <li class="it-attributes" style=" font-family: 'Caveat'; font-weight: bold; font-size: larger; border-bottom: 1px solid gray;"><i></i>{{chosenEvent?.eventCategory}}</li>
               <li class="it-attributes"><i></i> {{chosenEvent?.eventDescription}}</li>
+              <li class="it-attributes"><i></i><span class="spa">{{chosenEvent?.date}}</span></li>
               <li class="it-attributes"><i></i><span class="spa">{{chosenEvent?.eventLocation}}</span></li>
             </ul>
           </div>
@@ -69,7 +106,7 @@
       </div>
     </div>
     <div class="select-container">
-    <form>
+    <form class="center">
         <div class="number-input">
           <label for="normal">normal ticket {{chosenEvent?.prices[0]}}$</label>
           <input type="number" #normal="ngModel" ngModel name="normal"  id="one" placeholder="0" min="0">
@@ -89,6 +126,31 @@
       </form>
     </div>
 </div>
+</div>
+</div>
+</div>
+
+<!-- filter-->
+<div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="filter" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+     <button type="button" class="closeDelete" data-dismiss="modal" aria-label="close" id="outer">
+       <span aria-hidden="true">&times;</span>
+     </button>
+  <form>
+    <div class="center">
+    <h6>enter your city below</h6>
+    <input class="nameSearch" type="text" #location="ngModel" ngModel name="region" required   placeholder="enter city...">
+    <br>
+    <h6>enter two dates to find events inbetween</h6>
+    <input (click)="datepicker('picker')" id="picker" class="nameSearch" type="date" #datestart="ngModel" ngModel name="datestart" min="{{this.getCurrent()}}" >
+    <input  (click)="datepicker('pickertwo')" id="pickertwo" class="nameSearch" type="date" #dateend="ngModel" ngModel name="dateend" min="{{this.getCurrent()}}">
+    <br>
+    <br>
+    <button class="apply" (click)="filterEvents(location.value,datestart.value,dateend.value)">Apply</button>
+   </div>
+  </form>
+  <br>
 </div>
 </div>
 </div>

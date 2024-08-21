@@ -37,9 +37,9 @@
     margin-left: 20px;
   }
   
-  .profile-info h1 {
+  .profile-info h4 {
     margin: 0;
-    font-size: 24px;
+    color: #555;
   }
   
   .profile-info p {
@@ -128,20 +128,28 @@
 .list sup{
     font-size: 1em;
 }
+
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-    height: 8px; /* Height of the scrollbar (for horizontal scroll) */
+    display: none;
 }
-
-::-webkit-scrollbar-track {
-    background: white; /* Background of the scrollbar track, matching the page background */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #888; /* Scrollbar thumb color */
-    border-radius: 10px; /* Rounded corners for the thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Darker color on hover */
+@media only screen and (min-width: 495px) {
+    ::-webkit-scrollbar {
+        display: contents;
+        width: 2px; /* Width of the scrollbar */
+        height: 6px; /* Height of the scrollbar (for horizontal scroll) */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #fff; /* Background of the scrollbar track, matching the page background */
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #777; /* Scrollbar thumb color */
+        border-radius: 10px; /* Rounded corners for the thumb */
+        cursor: grab;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Darker color on hover */
+    }
 }

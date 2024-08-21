@@ -1,0 +1,54 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+span{
+    font-size: 1.3em;
+    font-family: 'Caveat';
+    color: chocolate;
+}
+/* About, Mission, Vision Sections */
+.container {
+    margin: 0 auto;
+    padding: 1.5em;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Caveat';
+    color: #555;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #555;
+}
+
+
+.mission-section,.about-section {
+    background-color: #f9f9f9;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    width: 21em;
+    margin: 1em auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.293);
+    padding: 3em 0;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+}

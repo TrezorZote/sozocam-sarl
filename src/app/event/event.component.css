@@ -3,15 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Comforter+Brush&family=Monoton&family=Road+Rage&family=Style+Script&family=Vesper+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Laila&family=Neucha&family=Permanent+Marker&family=Strait&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Strait&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 .scroll-container {
     font-family: 'Strait';
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
-    padding: 20px;
+    padding: 25px;
     gap: 20px; /* Space between cards */
     background-color: #fff;
+    border-radius: 8px;
+}
+
+section{
+    padding: 15px;
+    margin: .5em auto .5em auto;
 }
 
 .posts-section {
@@ -20,7 +26,9 @@
   }
   
   .posts-section h5 {
-    color: #4B5320;
+    color: #555;
+    font-size: 1em;
+    font-weight: bold;
     margin: 10px auto;
   }
   
@@ -29,17 +37,19 @@
     flex: 0 0 auto; /* Prevent cards from shrinking */
     width: 150px;
     height: 300px;
-    background-color: white;
+    background-color: #fff;
     padding: 15px;
     margin-bottom: 15px;
+    transition: padding-top 0.5s ease-in;
   }
   
   .post p {
+    color: #555;
     margin: 0;
   }
 
   .post:hover{
-  background-color: #f1f1f1;
+  padding-top: 5px;
   }
 
   .shower{
@@ -47,32 +57,9 @@
     object-fit: contain;
     width: 149px;
     border-radius: 4px;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
   }
-
-section.contact-right h3 {
-  margin-top: -.5em;
-  margin-left: 2em;
-  color: black;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-section.contact-right h3 span {
-  color: red;
-}
-
-section.contact-right iframe {
-    width: 95%;
-    height: 18em;
-    margin-left: .25em;
-}
-.locationLogo{
-  width: 1.6em;
-  height: 1.6em;
-  margin-top: -4.5em;
-  margin-left: .5em;
-
-}
 
 input[type="text"]:focus,
 input[type="search"]:focus {
@@ -80,28 +67,26 @@ input[type="search"]:focus {
   outline: none; /* Remove default focus outline */
 }
 
-
-
-.regionFilter{
-  border-right: none;
-  border-bottom: none;
-  border-top: none;
-   width: 2.4em;
-   height: 2.55em;
-   margin-left: -2.5em;
-  border-left: 1px solid gainsboro;
-   color: #777777;
-  background-color: white;
-   transition: background-color 0.5s ease-in-out ;
- }
- .regionFilter:hover{
-   background-color: gainsboro;
- }
-
- .call{
-  width: 2em;
-  height: 2em;
+.scroll-container h6{
+         color: #444;
+         font-weight: bold;
+         margin-top: .7em;
+         padding: 5px;
 }
+.center h6{
+   margin: 1em auto auto 1.5em;
+    color: #555;
+    font-size: 1.1em;
+    text-align: center;
+}
+h5{
+    margin: 1em auto auto 1.5em;
+     color: #555;
+     font-size: 1.1em;
+     font-weight: bold;
+     font-family: 'Monoton';
+ }
+
 .more{
   text-align: center;
 }
@@ -110,24 +95,28 @@ input[type="search"]:focus {
    text-align: center;
  }
  
- .regionSearch{
-     margin-top: 1em;
-     width: 16.25em;
-     height: 2.75em;
-     border: none;
-     background-color: white;
-     border: 1px solid gainsboro;
-     font-size: 1.05em;
-     text-align: center; 
-     margin-left: 2.5%;
-     color: gray;
+
+ .apply{
+  margin-top: 1em;
+  width: 16.25em;
+  height: 2.75em;
+  border: 1px solid gainsboro;
+  background-color: white;
+  font-size: 1.05em;
+  text-align: center;
+  margin-left: 2.5%;
+  color: gray;
+  transition: background-color 0.5s ease-in;
+ }
+
+ .apply:hover{
+    background-color:gainsboro;
  }
 
 .nameSearch{
   margin-top: 1em;
   width: 16.25em;
   height: 2.75em;
-  border: none;
   border: 1px solid gainsboro;
   background-color: white;
   font-size: 1.05em;
@@ -150,17 +139,6 @@ input[type="search"]:focus {
   background-color: gainsboro;
   cursor: pointer;
  }
-
-.alerter{
-    font-size: .5em;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 1.5em auto ;
-}
-.alerter h4{
-    color: rgba(0, 112, 0, 0.789);
-}
 
 .modal-content{
     padding: 20px;
@@ -187,11 +165,12 @@ background: white;
 
 .items-attributes {
     list-style-type: none;
+    padding: 10px;
     font-size: 1em;
-    margin-left: -1.8em;
     margin-top: .6em;
     color:#444444;
-    letter-spacing: .07em; 
+    letter-spacing: .07em;
+    text-align: center; 
 }
 .it-attributes{
   list-style-type: none;
@@ -200,38 +179,19 @@ background: white;
 
 .spa{
   border-bottom: 1px solid gray;
-  color:rgb(56, 87, 8);
-  font-size: 1em;
+  font-family: 'Caveat';
+   font-weight: bold;
 }
 
-
-.deleteItemLogo{
-  width: 1.5em;
-  height: 1.5em;
-  float: right;
-  margin-top:-.1em ;
-  margin-right: .45em;
-  cursor: pointer;
-  z-index: 855;
-  background-color:whitesmoke;
-  border-radius: 12px;
-  transition: background-color 0.5s ease-in-out;
-}.deleteItemLogo:hover{
- background-color: gainsboro;
-}
-
-.postBtn{
- display: grid;
- grid-template-columns: 60px auto;
-}
 
 .closeDelete{
  float: right;
-font-size: 1.6em;
+ font-size: 3em;
  border: none;
  background-color: white;
  margin: 0 .5em .5em auto;
  cursor: pointer;
+ opacity: 0.5;
  }
 
 
@@ -242,29 +202,27 @@ body {
 
 
 .select-container {
-    background-color: white;
-    margin: auto auto 2.5em auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1em auto 2.5em auto;
     padding: 1em;
-    width: 25em;
     border-radius: 8px;
   }
   
-  .select-container label {
-    display: block;
-    margin: 1em 1em 1em 0;
-    color:#444444;
-  }
   
-  input[type="file"]{
-    display: none;
-  }
   /* focus when user types into the input field the borders remain thesame not black using outline none*/
 
-input[type="number"]:focus {
+  input[type="number"]:focus,input[type="date"]:focus {
   border-color: #ccc; /* Same light gray border on focus */
   outline: none; /* Remove default focus outline */
+  text-align: center;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    text-align: center;
+}
 
 
 .postBtn{
@@ -290,30 +248,6 @@ input[type="number"]:focus {
         }
         
 
-        ::-webkit-scrollbar {
-            width: 8px; /* Width of the scrollbar */
-            height: 8px; /* Height of the scrollbar (for horizontal scroll) */
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: white; /* Background of the scrollbar track, matching the page background */
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background-color: #888; /* Scrollbar thumb color */
-            border-radius: 10px; /* Rounded corners for the thumb */
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #555; /* Darker color on hover */
-        }
-
-
-        .number-input {
-            display: flex;
-            align-items: center;
-        }
-
         .number-input input[type="number"] {
             -webkit-appearance: none;
             -moz-appearance: textfield;
@@ -321,9 +255,44 @@ input[type="number"]:focus {
             text-align: center;
             width: 50px;
             padding: 5px;
-            font-size: 16px;
+            font-size: 18px;
+            margin-bottom: .5em;
+            margin-left: 1em;
             border-radius: 4px;
             border: 1px solid #ccc;
-            margin: 0 5px;
         }
        
+        ::-webkit-scrollbar {
+            display: none;
+         }
+        
+        
+@media only screen and (min-width: 495px) {
+    ::-webkit-scrollbar {
+        display: contents;
+        width: 2px; /* Width of the scrollbar */
+        height: 6px; /* Height of the scrollbar (for horizontal scroll) */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #fff; /* Background of the scrollbar track, matching the page background */
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #777; /* Scrollbar thumb color */
+        border-radius: 10px; /* Rounded corners for the thumb */
+        cursor: grab;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Darker color on hover */
+    }
+
+    .number-input {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    
+    }

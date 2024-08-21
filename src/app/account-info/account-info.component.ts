@@ -58,9 +58,6 @@ export class AccountInfoComponent {
     if(mode==='edit'){
       button.setAttribute('data-target','#edit');
     }
-    if(mode==='out'){
-      button.setAttribute('data-target','#signout');
-    }
    
     container?.appendChild(button);
     button.click();

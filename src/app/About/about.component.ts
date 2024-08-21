@@ -3,10 +3,10 @@ import { AuthentificationService } from '../service/authentification.service';
 
 @Component({
   selector: 'app-pay',
-  templateUrl: './pay.component.html',
-  styleUrls: ['./pay.component.css']
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
-export class PayComponent {
+export class AboutComponent {
 
   constructor(public authService:AuthentificationService){}
 

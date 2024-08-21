@@ -1,6 +1,6 @@
 
 <div class="posts-section">
-    <h2>Account info</h2>
+    <h2>Account</h2>
     <div class="post">
         <ul class="display">
       <li><span>Name</span> {{authServ.getCurrentUser().name}}</li>
@@ -11,8 +11,8 @@
     </ul>
     </div>
     <br>
-   <button class="submit" (click)="deleteAccount()">Delete</button>
-   <button class="submit" (click)="onOpenModal('out')">Sign out</button>
+   <button class="submit" (click)="deleteAccount()" disabled>Delete</button>
+   <button class="submit" (click)="signOut()">Sign out</button>
     <button class="submit" (click)="onOpenModal('edit')">edit</button>
   </div>
 
@@ -35,24 +35,10 @@
        <label for="password">Password</label>
        <input type="text" ngModel="{{this.authServ.getCurrentUser().password}}" name="productPassword" id="productPassword"  >
        <div class="postBtn">
-         <button disabled type="submit"  class="submit">edit</button>
+         <button disabled type="submit" class="submit">edit</button>
        </div>
      </form>
     </div>
     </div>
     </div>
 
-    <!--confirm log out-->
-<div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
-    <div  class="modal-dialog" role="document" >
-      <div class="modal-content" >
-        <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close" id="out">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4>sign out?</h4>
-        <div class="postBtn">
-          <button class="submit" type="submit" (click)="signOut()">Yes</button>
-        </div>
-      </div>
-      </div>
-  </div>

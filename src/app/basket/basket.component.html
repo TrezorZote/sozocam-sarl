@@ -5,8 +5,11 @@
     </div>
     <div *ngFor="let items of authService.getCurrentUserCorb()" class="post">
       <h2> {{items.event.eventCategory}}</h2>
-      <p>{{items.event.eventDescription}}</p>
-      <p></p>
+      <p>{{items.event.eventLocation}}</p>
+      <p>{{items.event.date}}</p>
+      <p *ngIf="items.prices[0]>0">normal ticket {{items.prices[0]}}</p>
+      <p *ngIf="items.prices[1]>0">all area ticket {{items.prices[1]}}</p>
+      <p *ngIf="items.prices[2]>0">VIP ticket {{items.prices[2]}}</p>
     </div>
     <br>
     <div>

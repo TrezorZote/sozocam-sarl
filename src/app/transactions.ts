@@ -8,12 +8,10 @@ export class Transaction{
         this.sending=sending;
         this.date=date;
     }
-
     id:number
     sent:number;
     description:string;
     date:string;
     received:number;
     sending:Boolean;
-   
  }
