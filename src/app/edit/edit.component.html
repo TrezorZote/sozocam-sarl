@@ -1,0 +1,18 @@
+<br>
+<div>
+     <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" ngModel="{{this.authServ.getCurrentUser().name}}" name="name" maxlength="28">
+    <label for="email"> Email </label>
+    <input type="text" id="email" ngModel="{{this.authServ.getCurrentUser().email}}" name="email">
+    <label for="address"> Address </label>
+    <input type="text" id="address" ngModel="{{this.authServ.getCurrentUser().adress}}" name="address">
+    <label for="contact"> Contact</label>
+    <input type="tel" id="contact" ngModel="{{this.authServ.getCurrentUser().contact}}" name="contact">
+    <label for="password">Password</label>
+    <input type="text" ngModel="{{this.authServ.getCurrentUser().password}}" name="productPassword" id="productPassword"  >
+    <div class="postBtn">
+      <button disabled type="submit" class="submit">edit</button>
+    </div>
+  </form>
+</div>

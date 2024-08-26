@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthentificationService } from '../service/authentification.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-basket',
@@ -8,7 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent {
-  constructor(public authService: AuthentificationService) {}
+  constructor(public authService: AuthentificationService,public router:Router) {}
   
   ngOnInit() {
     this.authService.getCurrentUser();
@@ -35,18 +36,9 @@ addOrder():void{
 }
 
 public onOpenModal( mode:string):void{
-  const container= document.getElementById('main-container');
-  const button =document.createElement('button');
-  button.type='button';
-  button.style.display='none';
-  button.setAttribute('data-toggle','modal');
-  
   if(mode==='payment'){
-    button.setAttribute('data-target','#payment');
+  this.router.navigate(['profile/pay']);
   }
- 
-  container?.appendChild(button);
-  button.click();
 }
 
 }

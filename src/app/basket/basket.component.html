@@ -4,44 +4,15 @@
      <p>No events selected</p>
     </div>
     <div *ngFor="let items of authService.getCurrentUserCorb()" class="post">
-      <h2> {{items.event.eventCategory}}</h2>
+      <h3> {{items.event.eventCategory}}</h3>
       <p>{{items.event.eventLocation}}</p>
       <p>{{items.event.date}}</p>
-      <p *ngIf="items.prices[0]>0">normal ticket {{items.prices[0]}}</p>
-      <p *ngIf="items.prices[1]>0">all area ticket {{items.prices[1]}}</p>
+      <p *ngIf="items.prices[0]>0">Normal ticket {{items.prices[0]}}</p>
+      <p *ngIf="items.prices[1]>0">All area ticket {{items.prices[1]}}</p>
       <p *ngIf="items.prices[2]>0">VIP ticket {{items.prices[2]}}</p>
     </div>
     <br>
     <div>
     <p *ngIf="this.getSum()>0"><a class="pay" (click)="onOpenModal('payment')">continue to pay {{getSum()}}$</a><p>
     </div>
-
-    <!--select payment method-->
-<div  class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="payment" aria-hidden="true">
-    <div  class="modal-dialog" role="document">
-      <div class="modal-content" >
-        <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close" id="out">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="payment-container">
-            <h3>Select Payment Method</h3>
-            <div class="payment-methods">
-                <label>
-                   <img (click)="addOrder()" src="https://cdn-icons-png.flaticon.com/128/179/179457.png" alt="">
-                </label>
-                <label>
-                    <img class="pal" (click)="addOrder()"  src="https://cdn-icons-png.flaticon.com/128/196/196566.png" alt="">
-                </label>
-                <label>
-                   <img (click)="addOrder()"  src="https://cdn-icons-png.flaticon.com/128/38/38978.png" alt="">
-                </label>
-            </div>
-            <br>
-            <div class="basket-total">
-                Total <span id="totalAmount">{{this.getSum()}}$</span>
-            </div>
-        </div>        
-  </div>
-  </div>
-  </div>
 </div>

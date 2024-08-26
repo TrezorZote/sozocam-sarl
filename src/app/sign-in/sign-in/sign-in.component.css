@@ -31,18 +31,16 @@
   
   .container h2 {
     text-align: center;
-    padding-left: .5em;
-    margin: auto auto 1em auto;
-    color: grey;
-    font-size: 1.25em;
+    margin: auto auto 2em auto;
+    color: #444;
+    font-size: 1.35em;
     font-family: 'Strait';
   }
   .container p{
     text-align: center;
-    padding-left: .5em;
     margin: auto auto 1em auto;
-    color: gray;
-    font-size: 1em;
+    color: #555;
+    font-size: 1.15em;
     font-family: 'Strait';
   }
  
@@ -52,29 +50,29 @@
     display: block;
     margin-top: 1em;
     margin-bottom: 0;
-    color:gray;
+    color:#333;
     font-family: 'Strait';
   }
   
   .container input{
-    border: 1px solid gray;
+    border: 1px solid #333;
     border-radius: 5px;
     padding: 10px;
     width: 100%;
     height: 2.5em;
     font-family: 'Strait';
     font-size: 1em;
-    color: grey;
+    color: #444;
     transition: border-color 0.3s ease;
   }
 
   .container input.ng-touched.ng-invalid { /* check invalidity of input field*/
-    border-color: red;
+    border-color: #B00;
 }
 
 .error-message {
     font-family: 'Strait';
-    color: red;
+    color: #B00;
     font-size: 14px;
 }
   /* focus when user types into the input field the borders remain thesame not black using outline none*/
@@ -100,12 +98,13 @@ input[type="email"]:focus {
     }
   
   .submit {
-  color: #555555;
+  color: #333;
   font-family: 'Strait';
   cursor: pointer;
-  border: 1px solid gray;
-  width: 4.5em;
-  margin:1.5em auto auto auto ;
+  border: 1px solid #777;
+  width: 5em;
+  border-radius: 4px;
+  margin:2.5em auto auto auto ;
   background-color:white;
   height: 2em;
   transition: background-color 0.5s ease-in-out;
@@ -113,6 +112,6 @@ input[type="email"]:focus {
 
     
   .submit:hover {
-  background-color: whitesmoke;
+  background-color: gainsboro;
   }
   

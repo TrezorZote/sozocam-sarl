@@ -56,7 +56,7 @@ export class AccountInfoComponent {
     button.setAttribute('data-toggle','modal');
     
     if(mode==='edit'){
-      button.setAttribute('data-target','#edit');
+     this.router.navigate(['profile/edit']);
     }
    
     container?.appendChild(button);

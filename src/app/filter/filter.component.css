@@ -1,0 +1,50 @@
+.apply{
+    margin-top: 1em;
+    width: 7.25em;
+    height: 2.25em;
+    border: 1px solid gainsboro;
+    background-color: #333;
+    font-size: 1.05em;
+    text-align: center;
+    color: whitesmoke;
+    transition: background-color 0.5s ease-in;
+   }
+  
+   .apply:hover{
+      background-color:#111;
+   }
+  
+
+   input[type="text"]:focus,
+input[type="search"]:focus,input[type="date"]:focus {
+  border-color: #CCC; /* Same light gray border on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+.center h4{
+    margin: 2em auto .5em auto;
+     color: #444;
+    font-size: 1.1em;
+     text-align: center;
+ }
+
+  .center{
+    margin-top: 3em;
+    text-align: center;
+  }
+  
+  .nameSearch{
+    margin-top: 1em;
+    width: 15em;
+    height: 2.75em;
+    border: 1px solid #888;
+    background-color: white;
+    font-size: 1.05em;
+    text-align: center;
+    color: #444;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    text-align: center;
+}

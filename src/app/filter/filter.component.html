@@ -1,0 +1,14 @@
+<div>
+    <form>
+        <div class="center">
+        <input class="nameSearch" type="text" #location="ngModel" ngModel name="region" required   placeholder="enter city...">
+        <br>
+        <h4>Enter two dates to find events inbetween</h4>
+        <input (click)="datepicker('picker')" id="picker" class="nameSearch" type="date" #datestart="ngModel" ngModel name="datestart" min="{{this.getCurrent()}}" >
+        <input  (click)="datepicker('pickertwo')" id="pickertwo" class="nameSearch" type="date" #dateend="ngModel" ngModel name="dateend" min="{{this.getCurrent()}}">
+        <br>
+        <br>
+        <button class="apply" (click)="filterEvents(location.value,datestart.value,dateend.value)">Apply</button>
+       </div>
+      </form>
+</div>

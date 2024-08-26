@@ -26,7 +26,7 @@ section{
   }
   
   .posts-section h5 {
-    color: #555;
+    color: #444;
     font-size: 1em;
     font-weight: bold;
     margin: 10px auto;
@@ -71,7 +71,6 @@ input[type="search"]:focus {
          color: #444;
          font-weight: bold;
          margin-top: .7em;
-         padding: 5px;
 }
 .center h6{
    margin: 1em auto auto 1.5em;
@@ -81,7 +80,7 @@ input[type="search"]:focus {
 }
 h5{
     margin: 1em auto auto 1.5em;
-     color: #555;
+     color: #4B5320;
      font-size: 1.1em;
      font-weight: bold;
      font-family: 'Monoton';
@@ -100,12 +99,12 @@ h5{
   margin-top: 1em;
   width: 16.25em;
   height: 2.75em;
-  border: 1px solid gainsboro;
+  border: 1px solid #888;
   background-color: white;
   font-size: 1.05em;
   text-align: center;
   margin-left: 2.5%;
-  color: gray;
+  color: #444;
   transition: background-color 0.5s ease-in;
  }
 
@@ -117,12 +116,12 @@ h5{
   margin-top: 1em;
   width: 16.25em;
   height: 2.75em;
-  border: 1px solid gainsboro;
+  border: 1px solid #888;
   background-color: white;
   font-size: 1.05em;
   text-align: center;
   margin-left: 2.5%;
-  color: gray;
+  color: #444;
 }
 
 .searchIcon{
@@ -130,68 +129,14 @@ h5{
   height:2.5em;
   margin-bottom: .20em;
   margin-left: -2.7em;
-  border-left: 1px solid gainsboro;
+  border-left: 1px solid #888;
   background-color: white;
   transition: background-color 0.5s ease-in-out;
  }
 
  .searchIcon:hover{
-  background-color: gainsboro;
+  background-color: whitesmoke;
   cursor: pointer;
- }
-
-.modal-content{
-    padding: 20px;
-}
-.item-container1{
-    padding-bottom:20px ;
-    border-bottom: 1px solid #ddd;
-}
-
-.item-card-part1{
-margin: .8em auto .4em .20em;
-width: 98%;
-display: inline-block;
-background: white;
-}
-
-.item-rounded-image{
-   object-fit: contain;
-   width: 100%;
-   height: 15.5em;
-   margin: .25em .25em .5em 0;
-}
-
-
-.items-attributes {
-    list-style-type: none;
-    padding: 10px;
-    font-size: 1em;
-    margin-top: .6em;
-    color:#444444;
-    letter-spacing: .07em;
-    text-align: center; 
-}
-.it-attributes{
-  list-style-type: none;
-  margin-top: .5em;
-}
-
-.spa{
-  border-bottom: 1px solid gray;
-  font-family: 'Caveat';
-   font-weight: bold;
-}
-
-
-.closeDelete{
- float: right;
- font-size: 3em;
- border: none;
- background-color: white;
- margin: 0 .5em .5em auto;
- cursor: pointer;
- opacity: 0.5;
  }
 
 
@@ -199,7 +144,6 @@ body {
   background-color: white;
   font-family: 'Strait';
 }
-
 
 .select-container {
     text-align: center;
@@ -209,59 +153,6 @@ body {
     padding: 1em;
     border-radius: 8px;
   }
-  
-  
-  /* focus when user types into the input field the borders remain thesame not black using outline none*/
-
-  input[type="number"]:focus,input[type="date"]:focus {
-  border-color: #ccc; /* Same light gray border on focus */
-  outline: none; /* Remove default focus outline */
-  text-align: center;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    text-align: center;
-}
-
-
-.postBtn{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    }
-  
-    .submit {
-        color: #444444;
-        cursor: pointer;
-        border: 1px solid gray;
-        width: 4.5em;
-        margin:1.5em auto auto auto ;
-        background-color:white;
-        height: 2em;
-        transition: background-color 0.5s ease-in-out;
-        }
-      
-          
-        .submit:hover {
-        background-color: whitesmoke;
-        }
-        
-
-        .number-input input[type="number"] {
-            -webkit-appearance: none;
-            -moz-appearance: textfield;
-            appearance: textfield;
-            text-align: center;
-            width: 50px;
-            padding: 5px;
-            font-size: 18px;
-            margin-bottom: .5em;
-            margin-left: 1em;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-       
         ::-webkit-scrollbar {
             display: none;
          }
@@ -286,13 +177,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     
     ::-webkit-scrollbar-thumb:hover {
         background-color: #555; /* Darker color on hover */
-    }
+    } 
 
-    .number-input {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: auto;
-    }
-    
     }

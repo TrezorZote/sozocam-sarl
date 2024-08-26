@@ -14,6 +14,10 @@ import { BasketComponent } from './basket/basket.component';
 import { EventComponent } from './event/event.component';
 import { AboutComponent } from './About/about.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
+import { TicketingComponent } from './ticketing/ticketing.component';
+import { PayComponent } from './pay/pay.component';
+import { FilterComponent } from './filter/filter.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { AccountInfoComponent } from './account-info/account-info.component';
     BasketComponent,
     EventComponent,
     AboutComponent,
-    AccountInfoComponent
+    AccountInfoComponent,
+    TicketingComponent,
+    PayComponent,
+    FilterComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,AppRoutingModule,FormsModule,BrowserAnimationsModule  //import appRoutingModules so this module could be used her

@@ -1,0 +1,47 @@
+<div class="item-container1">
+    <div class="item-row">
+      <div class="item-column1">
+        <div class="item-card-part1">
+          <div id="carouselExampleSlidesOnly" data-bs-ride="carousel"  class="carousel slide" >
+          <div class="carousel-inner" role="listbox" >
+            <div class="carousel-item active">
+              <img class="item-rounded-image"  src="{{chosenEvent?.imagesrc}}" alt="">
+            </div>
+            <div  class="carousel-item" >
+              <img class="item-rounded-image"  src="{{chosenEvent?.imagesrc}}" alt="">
+            </div>
+            <div class="carousel-item">
+              <img class="item-rounded-image" src="{{chosenEvent?.imagesrc}}" alt="">
+            </div>
+          </div>
+        </div>
+          <ul class="items-attributes">
+            <li class="it-attributes" style=" font-family: 'Caveat'; font-weight: bold; font-size: larger; border-bottom: 1px solid gray;"><i></i>{{chosenEvent?.eventCategory}}</li>
+            <li class="it-attributes"><i></i> {{chosenEvent?.eventDescription}}</li>
+            <li class="it-attributes"><i></i><span class="spa">{{chosenEvent?.date}}</span></li>
+            <li class="it-attributes"><i></i><span class="spa">{{chosenEvent?.eventLocation}}</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="select-container">
+  <form class="center">
+      <div class="number-input">
+        <label for="normal">normal ticket {{chosenEvent?.prices[0]}}$</label>
+        <input type="number" #normal="ngModel" ngModel name="normal"  id="one" placeholder="0" min="0">
+      </div>
+      <div class="number-input">
+        <label for="allaccess">all area ticket {{chosenEvent?.prices[1]}}$</label>
+        <input type="number" #allaccess="ngModel" ngModel name="allaccess"  id="two" placeholder="0" min="0">
+      </div>
+      <div class="number-input">
+          <label for="vip">VIPs ticket {{chosenEvent?.prices[2]}}$</label>
+          <input type="number" #vip="ngModel" ngModel name="vip" id="three" placeholder="0" min="0">
+      </div>
+      <br>
+      <div class="postBtn">
+      <button class="submit" type="submit" (click)="select(chosenEvent,vip.value,allaccess.value,normal.value)">next</button>
+    </div>
+    </form>
+  </div>

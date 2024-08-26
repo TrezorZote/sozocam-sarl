@@ -2,12 +2,12 @@
 
 
 .posts-section {
-    margin-top: 20px;
+    margin-top: 40px;
     font-family: 'Strait';
   }
   
   .posts-section h2 {
-    color:#555;
+    color:#4B5320;
     font-size: 1.5em;
     margin-bottom: 20px;
   }
@@ -17,7 +17,7 @@
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
-    border: 1px solid gainsboro;
+    border: 1px solid #AAA;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
   }
   
@@ -28,64 +28,22 @@
   .display{
   list-style-type: none;
   padding: 10px;
+  margin-bottom: .5em;
   }
   .display li{
     margin:.5em auto ;
     }
 .display span{
     color: #4B5320;
+    margin-right: .5em;
 }
 
-  .modal-content{
-    padding: 20px;
-}
-.closeDelete{
-    float: right;
-    font-size: 3em;
-    border: none;
-    background-color: white;
-    margin: 0 .5em .5em auto;
-    cursor: pointer;
-    opacity: 0.5;
-    }
-  
-   label {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 0;
-    font-weight: bold;
-    color:#4B5320;
-    font-family: 'Strait';
-  }
-  
-   input{
-    border-bottom: 1px solid gray;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    margin-bottom: 0;
-    width: 100%;
-    height: 2.5em;
-    font-family: 'Strait';
-    font-size: 1em;
-    color: #555555;
-  }
-
- 
   /* focus when user types into the input field the borders remain thesame not black using outline none*/
 input[type="tel"]:focus,
 input[type="text"]:focus,
 input[type="number"]:focus {
   border-color: #ccc; /* Same light gray border on focus */
   outline: none; /* Remove default focus outline */
-}
-
-h4{
-    color: #444444;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Strait';
 }
 
 #signout{
@@ -102,12 +60,12 @@ h4{
     }
   
     .submit {
-        color: #777777;
+        color: #444;
         font-family: 'Strait';
         cursor: pointer;
-        border: 1px solid gray;
+        border: 1px solid #888;
         width: 4.5em;
-        margin:1.5em auto auto .5em ;
+        margin:1.5em auto auto 1em ;
         background-color:white;
         height: 2em;
         transition: background-color 0.5s ease-in-out;
