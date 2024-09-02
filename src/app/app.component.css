@@ -37,7 +37,7 @@ body {
 
 section.marketing {
   animation: backgroundAnimation 10s infinite;
-  margin: -.25em .5em 1.5em .5em;
+  margin: -.25em .25em 1.5em .25em;
   border-radius: 8px;
 }
 
@@ -45,7 +45,7 @@ section.marketing {
   overflow: hidden;
   position: fixed;
   top: 0;
-  background-color: #222222;
+  background-color: #333;
   box-shadow: 0 .2em .2em 0 #4d4d4d;
   width: 100%;
   height:2.9em;
@@ -56,7 +56,7 @@ section.marketing {
 .navbar .navbar-logo {
   margin-left: -.5em;
  font-weight: 500;
-  color: #456345;
+  color: #567b56;
   text-decoration: none;
   font-family: 'Laila';
   font-size: 20px;
@@ -64,7 +64,7 @@ section.marketing {
 }
 
 .navbar .navbar-logo span {
-  color: beige;
+  color: gainsboro;
   font-weight: 500;
 }
 
@@ -224,7 +224,7 @@ nav ul.navbar-menu a.home {
     font-weight: lighter;
     font-size: 1em;
     font-family: 'Strait';
-    color: #555555;
+    color: #AAA;
     margin-right: 4.5em;
     margin-top: 1em;
     padding: 3px;
@@ -236,12 +236,12 @@ nav ul.navbar-menu a.home {
   
   nav ul.navbar-menu a {
     text-decoration: none;
-    color: #AAAAAA;
+    color: gainsboro;
     transition:color 0.3s ease-in;
   }
   nav ul.navbar-menu a.home {
     text-decoration: none;
-    color: #AAAAAA;
+    color: gainsboro;
   }
   
 nav .navbar-menu a:hover {

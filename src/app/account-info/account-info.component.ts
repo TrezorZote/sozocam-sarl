@@ -16,13 +16,13 @@ export class AccountInfoComponent {
    if(this.authServ.deleteAccount()){
     this.router.navigate(['/sign-in']);
     Swal.fire({
-      icon: 'success',
-      title: 'deleted',
-      text: 'account was deleted',
-      timer: 3000,
-    showConfirmButton: false,
-    width: '400px', // Adjust width as needed
-    heightAuto:true
+      position:'bottom',
+     title: 'Account was deleted from our system',
+     timer: 3000,
+     showConfirmButton: false,
+     width: '300px', // Adjust width as needed
+     heightAuto:true,
+     toast:true
    }); 
    }
   }
@@ -33,13 +33,14 @@ export class AccountInfoComponent {
     dismiss?.click();
     this.router.navigate(['/sign-in']);
     Swal.fire({
-      icon: 'success',
+      position:'bottom',
       title: 'signed out',
-      text: 'see you soon',
       timer: 3000,
-    showConfirmButton: false,
-    width: '400px', // Adjust width as needed
-    heightAuto:true
+      showConfirmButton: false,
+      width: '150px', // Adjust width as needed
+      heightAuto:true,
+      toast:true,
+      padding:'1px',
    }); 
   }
 

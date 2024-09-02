@@ -21,24 +21,26 @@ export class FilterComponent {
   });
 if(this.authServ.filterArray.length>=1){
 Swal.fire({
-  icon: 'success',
-  title: 'filtered',
-  text: 'view filter result under search',
-  timer: 3000,
+  title: 'found events with given filter go to view events ',
+  position:'bottom',
+  timer: 4000,
 showConfirmButton: false,
-width: '400px', // Adjust width as needed
-heightAuto:true
+width: '310px', // Adjust width as needed
+heightAuto:true,
+toast:true,
+padding:'1px',
 }); 
 }
 else{
 Swal.fire({
-  icon: 'error',
-  title: 'no event found',
-  text: 'the filter found no match',
+  title: 'sorry no event found ',
+  position:'bottom',
   timer: 3000,
 showConfirmButton: false,
-width: '400px', // Adjust width as needed
-heightAuto:true
+width: '210px', // Adjust width as needed
+heightAuto:true,
+toast:true,
+padding:'1px'
 }); 
 }
  }

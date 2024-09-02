@@ -21,26 +21,28 @@ export class TicketingComponent {
       const dismiss= document.getElementById('out');
       dismiss?.click();
       Swal.fire({
-        icon: 'success',
-        title: 'added to basket',
-        text: 'event visible in your basket',
+        position:'bottom',
+        title: 'event added to your basket',
         timer: 3000,
-      showConfirmButton: false,
-      width: '400px', // Adjust width as needed
-      heightAuto:true
+        showConfirmButton: false,
+        heightAuto:true,
+        width:'255px',
+        toast:true, 
+        padding:'1px',
       });
     }
     this.router.navigate(['profile/event']);
   }
   else{
     Swal.fire({
-      icon: 'error',
-      title: 'no ticket selected',
-      text: 'select atleast one ticket',
-      timer: 3000,
-    showConfirmButton: false,
-    width: '400px', // Adjust width as needed
-    heightAuto:true
+      position:'bottom',
+      title: 'select atleast one ticket',
+      timer: 4000,
+      showConfirmButton: false,
+      width:'230px',
+      heightAuto:true,
+      toast:true,
+      padding:'1px'
     }); 
   }
   }

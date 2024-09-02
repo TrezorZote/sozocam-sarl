@@ -58,13 +58,14 @@ export class AuthentificationService {
         this.currentUser.loggedIn = true;
         sessionStorage.setItem('loggedin', 'true'); //set the logged in session item to true when the user logs in
         Swal.fire({
-          icon: 'success',
-          title: 'Logged in',
-          text: 'You have been logged in successfully',
-          timer: 3000,
-        showConfirmButton: false,
-        width: '400px', // Adjust width as needed
-        heightAuto:true
+          position:'bottom',
+    title: 'logged in successfully',
+    timer: 3000,
+    showConfirmButton: false,
+    width: '220px', // Adjust width as needed
+    heightAuto:true,
+    toast:true,
+    padding:'1px',
         });
         return true;
       }
@@ -79,13 +80,14 @@ export class AuthentificationService {
            this.count++;
            this.currentUser=newUser;
            Swal.fire({
-            icon: 'success',
-            title: 'signed up',
-            text: 'welcome to Temliz',
-            timer: 3000,
-          showConfirmButton: false,
-          width: '400px', // Adjust width as needed
-          heightAuto:true
+            position:'bottom',
+     title: 'signed up welcome to eventiz',
+     timer: 3000,
+     showConfirmButton: false,
+     width: '300px', // Adjust width as needed
+     heightAuto:true,
+     toast:true,
+     padding:'1px',
          }); 
         this.persons.push(newUser);
         return true;
@@ -162,13 +164,14 @@ addOrder(basketItem:Basket):boolean{
   this.currentUser.transactions.reverse();
   this.basket=[];
   Swal.fire({
-    icon: 'success',
+    position:'bottom',
     title: 'Payment successful',
-    text: 'thank you for trusting temliz',
     timer: 3000,
   showConfirmButton: false,
-  width: '400px', // Adjust width as needed
-  heightAuto:true
+  width: '200px', // Adjust width as needed
+  heightAuto:true,
+  toast:true,
+  padding:'1px',
   });
   return true;
 }

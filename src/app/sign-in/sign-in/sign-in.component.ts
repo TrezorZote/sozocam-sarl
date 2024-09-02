@@ -31,13 +31,14 @@ export class SignInComponent {
       this.router.navigate(['/profile/event']);
     } else {
       Swal.fire({
-        icon: 'error',
-        title: 'failed',
-        text: 'no account with credentials',
+        position:'bottom',
+        title: 'login failed verify credentials',
         timer: 3000,
       showConfirmButton: false,
-      width: '400px', // Adjust width as needed
-      heightAuto:true
+      width: '350px', // Adjust width as needed
+      heightAuto:true,
+      toast:true,
+      padding:'1px',
       });
     }
   }else{

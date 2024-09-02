@@ -31,13 +31,14 @@ if(this.authServ.basket[0]!=null){
 this.authServ.addOrder(this.authServ.basket[0]);
 }else{
   Swal.fire({
-    icon: 'error',
-    title: 'Basket empty',
-    text: 'add events to your basket',
-    timer: 3000,
-  showConfirmButton: false,
-  width: '400px', // Adjust width as needed
-  heightAuto:true
+    position:'bottom',
+    title: 'your basket is empty view events',
+    timer: 4000,
+    showConfirmButton: false,
+    width:'295px',
+    heightAuto:true,
+    toast:true,
+    padding:'1px'
   });
 }
 }
